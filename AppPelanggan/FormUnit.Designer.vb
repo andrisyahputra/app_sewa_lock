@@ -66,7 +66,7 @@ Partial Class FormUnit
         Me.btnUnit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUnit.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUnit.ForeColor = System.Drawing.Color.White
-        Me.btnUnit.Location = New System.Drawing.Point(321, 626)
+        Me.btnUnit.Location = New System.Drawing.Point(370, 685)
         Me.btnUnit.Name = "btnUnit"
         Me.btnUnit.Size = New System.Drawing.Size(249, 31)
         Me.btnUnit.TabIndex = 44
@@ -80,7 +80,7 @@ Partial Class FormUnit
         Me.btnKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnKamar.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnKamar.ForeColor = System.Drawing.Color.White
-        Me.btnKamar.Location = New System.Drawing.Point(33, 626)
+        Me.btnKamar.Location = New System.Drawing.Point(82, 685)
         Me.btnKamar.Name = "btnKamar"
         Me.btnKamar.Size = New System.Drawing.Size(246, 31)
         Me.btnKamar.TabIndex = 44
@@ -92,7 +92,7 @@ Partial Class FormUnit
         Me.btnTutup.BackColor = System.Drawing.Color.Transparent
         Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
-        Me.btnTutup.Location = New System.Drawing.Point(870, 3)
+        Me.btnTutup.Location = New System.Drawing.Point(963, 3)
         Me.btnTutup.Name = "btnTutup"
         Me.btnTutup.Size = New System.Drawing.Size(50, 39)
         Me.btnTutup.TabIndex = 47
@@ -106,7 +106,7 @@ Partial Class FormUnit
         Me.DataGridAdaKamar.Location = New System.Drawing.Point(33, 365)
         Me.DataGridAdaKamar.Name = "DataGridAdaKamar"
         Me.DataGridAdaKamar.ReadOnly = True
-        Me.DataGridAdaKamar.Size = New System.Drawing.Size(831, 106)
+        Me.DataGridAdaKamar.Size = New System.Drawing.Size(931, 141)
         Me.DataGridAdaKamar.TabIndex = 61
         '
         'DataGridUnit
@@ -118,7 +118,7 @@ Partial Class FormUnit
         Me.DataGridUnit.Location = New System.Drawing.Point(33, 54)
         Me.DataGridUnit.Name = "DataGridUnit"
         Me.DataGridUnit.ReadOnly = True
-        Me.DataGridUnit.Size = New System.Drawing.Size(831, 252)
+        Me.DataGridUnit.Size = New System.Drawing.Size(931, 252)
         Me.DataGridUnit.TabIndex = 60
         '
         'DataGridPenuhKamar
@@ -127,10 +127,10 @@ Partial Class FormUnit
         Me.DataGridPenuhKamar.AllowUserToDeleteRows = False
         Me.DataGridPenuhKamar.BackgroundColor = System.Drawing.Color.White
         Me.DataGridPenuhKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridPenuhKamar.Location = New System.Drawing.Point(33, 491)
+        Me.DataGridPenuhKamar.Location = New System.Drawing.Point(33, 529)
         Me.DataGridPenuhKamar.Name = "DataGridPenuhKamar"
         Me.DataGridPenuhKamar.ReadOnly = True
-        Me.DataGridPenuhKamar.Size = New System.Drawing.Size(831, 106)
+        Me.DataGridPenuhKamar.Size = New System.Drawing.Size(931, 131)
         Me.DataGridPenuhKamar.TabIndex = 63
         '
         'btnUser
@@ -140,7 +140,7 @@ Partial Class FormUnit
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUser.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUser.ForeColor = System.Drawing.Color.White
-        Me.btnUser.Location = New System.Drawing.Point(615, 626)
+        Me.btnUser.Location = New System.Drawing.Point(664, 685)
         Me.btnUser.Name = "btnUser"
         Me.btnUser.Size = New System.Drawing.Size(249, 31)
         Me.btnUser.TabIndex = 64
@@ -151,8 +151,8 @@ Partial Class FormUnit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(923, 711)
+        Me.BackColor = System.Drawing.SystemColors.Highlight
+        Me.ClientSize = New System.Drawing.Size(1016, 749)
         Me.Controls.Add(Me.btnUser)
         Me.Controls.Add(Me.DataGridPenuhKamar)
         Me.Controls.Add(Me.DataGridAdaKamar)

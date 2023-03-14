@@ -10,9 +10,22 @@ Public Class FormMenu
     Private Sub btnUser_Click(sender As Object, e As EventArgs)
         FormTambahUser.ShowDialog()
     End Sub
+    Sub switchPanel(ByVal panel As Form)
+        PanelMenu.Controls.Clear()
+        'btnTutup.Visible = False
+        panel.TopLevel = False
+        PanelMenu.Controls.Add(panel)
+        panel.Show()
+    End Sub
 
+    Private Sub btnPelanggan_Click(sender As Object, e As EventArgs) Handles btnPelanggan.Click
+        btnTutup.Visible = False
+        switchPanel(FormPelanggan)
+    End Sub
     Private Sub btnUnit_Click(sender As Object, e As EventArgs) Handles btnUnit.Click
-        FormUnit.ShowDialog()
+        btnTutup.Visible = False
+        'FormUnit.ShowDialog()
+        switchPanel(FormUnit)
     End Sub
 
     Private Sub btnJamLock_Click(sender As Object, e As EventArgs) Handles btnJamLock.Click
@@ -57,7 +70,5 @@ Public Class FormMenu
 
     End Sub
 
-    Private Sub btnPelanggan_Click(sender As Object, e As EventArgs) Handles btnPelanggan.Click
-        FormPelanggan.ShowDialog()
-    End Sub
+
 End Class

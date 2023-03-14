@@ -27,10 +27,9 @@ Partial Class FormPelanggan
         Me.btnLapor = New System.Windows.Forms.Label()
         Me.lvpelanggan = New System.Windows.Forms.ListView()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.txtJam = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtKamar = New System.Windows.Forms.TextBox()
         Me.txtUnit = New System.Windows.Forms.TextBox()
         Me.CBIDUnit = New System.Windows.Forms.ComboBox()
@@ -53,10 +52,13 @@ Partial Class FormPelanggan
         Me.txtNama = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtKasir = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtPembayaran = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtJam = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtKasir = New System.Windows.Forms.TextBox()
         Me.txtTanggal = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
@@ -65,11 +67,9 @@ Partial Class FormPelanggan
         Me.btnHapus = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Label()
-        Me.btnTutup = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnJamLock = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnTutup = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -107,43 +107,8 @@ Partial Class FormPelanggan
         Me.Panel6.Controls.Add(Me.GroupBox2)
         Me.Panel6.Location = New System.Drawing.Point(35, 16)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(936, 409)
+        Me.Panel6.Size = New System.Drawing.Size(922, 409)
         Me.Panel6.TabIndex = 97
-        '
-        'txtJam
-        '
-        Me.txtJam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtJam.Enabled = False
-        Me.txtJam.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJam.Location = New System.Drawing.Point(86, 705)
-        Me.txtJam.Name = "txtJam"
-        Me.txtJam.ReadOnly = True
-        Me.txtJam.Size = New System.Drawing.Size(128, 32)
-        Me.txtJam.TabIndex = 90
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Navy
-        Me.Label1.Location = New System.Drawing.Point(30, 705)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 27)
-        Me.Label1.TabIndex = 89
-        Me.Label1.Text = "Jam"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Navy
-        Me.Label10.Location = New System.Drawing.Point(507, 710)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(63, 27)
-        Me.Label10.TabIndex = 86
-        Me.Label10.Text = "Kasir"
         '
         'GroupBox1
         '
@@ -177,10 +142,30 @@ Partial Class FormPelanggan
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(936, 333)
+        Me.GroupBox1.Size = New System.Drawing.Size(922, 333)
         Me.GroupBox1.TabIndex = 62
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Pelanggan"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(714, 149)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(151, 25)
+        Me.TextBox1.TabIndex = 94
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(501, 150)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 27)
+        Me.Label2.TabIndex = 93
+        Me.Label2.Text = "Tempo"
         '
         'txtKamar
         '
@@ -398,18 +383,6 @@ Partial Class FormPelanggan
         Me.Label3.TabIndex = 67
         Me.Label3.Text = "Nama"
         '
-        'txtKasir
-        '
-        Me.txtKasir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtKasir.Enabled = False
-        Me.txtKasir.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.txtKasir.Location = New System.Drawing.Point(577, 705)
-        Me.txtKasir.Name = "txtKasir"
-        Me.txtKasir.ReadOnly = True
-        Me.txtKasir.Size = New System.Drawing.Size(184, 32)
-        Me.txtKasir.TabIndex = 87
-        Me.txtKasir.Text = "."
-        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Navy
@@ -420,7 +393,7 @@ Partial Class FormPelanggan
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(0, 333)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(936, 76)
+        Me.GroupBox2.Size = New System.Drawing.Size(922, 76)
         Me.GroupBox2.TabIndex = 61
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Jumlah"
@@ -449,6 +422,53 @@ Partial Class FormPelanggan
         Me.Label6.Size = New System.Drawing.Size(132, 27)
         Me.Label6.TabIndex = 46
         Me.Label6.Text = "Pembayaran"
+        '
+        'txtJam
+        '
+        Me.txtJam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtJam.Enabled = False
+        Me.txtJam.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtJam.Location = New System.Drawing.Point(86, 705)
+        Me.txtJam.Name = "txtJam"
+        Me.txtJam.ReadOnly = True
+        Me.txtJam.Size = New System.Drawing.Size(128, 32)
+        Me.txtJam.TabIndex = 90
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Navy
+        Me.Label1.Location = New System.Drawing.Point(30, 705)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 27)
+        Me.Label1.TabIndex = 89
+        Me.Label1.Text = "Jam"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Navy
+        Me.Label10.Location = New System.Drawing.Point(507, 710)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(63, 27)
+        Me.Label10.TabIndex = 86
+        Me.Label10.Text = "Kasir"
+        '
+        'txtKasir
+        '
+        Me.txtKasir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtKasir.Enabled = False
+        Me.txtKasir.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.txtKasir.Location = New System.Drawing.Point(577, 705)
+        Me.txtKasir.Name = "txtKasir"
+        Me.txtKasir.ReadOnly = True
+        Me.txtKasir.Size = New System.Drawing.Size(184, 32)
+        Me.txtKasir.TabIndex = 87
+        Me.txtKasir.Text = "."
         '
         'txtTanggal
         '
@@ -537,16 +557,6 @@ Partial Class FormPelanggan
         Me.BtnTambah.Size = New System.Drawing.Size(69, 70)
         Me.BtnTambah.TabIndex = 91
         '
-        'btnTutup
-        '
-        Me.btnTutup.BackColor = System.Drawing.Color.Transparent
-        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
-        Me.btnTutup.Location = New System.Drawing.Point(977, 4)
-        Me.btnTutup.Name = "btnTutup"
-        Me.btnTutup.Size = New System.Drawing.Size(50, 39)
-        Me.btnTutup.TabIndex = 100
-        '
         'Timer1
         '
         '
@@ -567,32 +577,22 @@ Partial Class FormPelanggan
         Me.btnJamLock.Text = "SET ID CARD"
         Me.btnJamLock.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'btnTutup
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(714, 149)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 25)
-        Me.TextBox1.TabIndex = 94
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(501, 150)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 27)
-        Me.Label2.TabIndex = 93
-        Me.Label2.Text = "Tempo"
+        Me.btnTutup.BackColor = System.Drawing.Color.Transparent
+        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
+        Me.btnTutup.Location = New System.Drawing.Point(963, 3)
+        Me.btnTutup.Name = "btnTutup"
+        Me.btnTutup.Size = New System.Drawing.Size(50, 39)
+        Me.btnTutup.TabIndex = 100
         '
         'FormPelanggan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1028, 750)
+        Me.BackColor = System.Drawing.SystemColors.Highlight
+        Me.ClientSize = New System.Drawing.Size(1016, 749)
         Me.Controls.Add(Me.txtJam)
         Me.Controls.Add(Me.btnJamLock)
         Me.Controls.Add(Me.btnTutup)
@@ -666,9 +666,9 @@ Partial Class FormPelanggan
     Friend WithEvents btnHapus As Label
     Friend WithEvents BtnEdit As Label
     Friend WithEvents BtnTambah As Label
-    Friend WithEvents btnTutup As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnJamLock As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnTutup As Label
 End Class

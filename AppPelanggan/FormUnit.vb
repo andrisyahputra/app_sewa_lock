@@ -2,16 +2,17 @@
 
 Public Class FormUnit
     Private Sub btnJamLock_Click(sender As Object, e As EventArgs) Handles btnUnit.Click
-        FormTambahUnit.ShowDialog()
+        FormTambahUnit.Show()
     End Sub
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
+        FormMenu.btnTutup.Visible = True
         Me.Close()
     End Sub
 
     Private Sub AturGridUnit()
         DataGridUnit.Columns(0).Width = 120
-        DataGridUnit.Columns(1).Width = 250
-        DataGridUnit.Columns(2).Width = 250
+        DataGridUnit.Columns(1).Width = 300
+        DataGridUnit.Columns(2).Width = 300
         DataGridUnit.Columns(3).Width = 150
         DataGridUnit.Columns(0).DataPropertyName = "id_unit"
         DataGridUnit.Columns(1).DataPropertyName = "nama_unit"
@@ -52,7 +53,7 @@ Public Class FormUnit
         DataGridAdaKamar.Columns(0).Width = 70
         DataGridAdaKamar.Columns(1).Width = 150
         DataGridAdaKamar.Columns(2).Width = 70
-        DataGridAdaKamar.Columns(3).Width = 150
+        DataGridAdaKamar.Columns(3).Width = 250
         DataGridAdaKamar.Columns(4).Width = 150
         DataGridAdaKamar.Columns(5).Width = 100
         DataGridAdaKamar.Columns(6).Width = 95
@@ -90,7 +91,7 @@ Public Class FormUnit
             .Columns(0).Width = 70
             .Columns(1).Width = 150
             .Columns(2).Width = 70
-            .Columns(3).Width = 150
+            .Columns(3).Width = 250
             .Columns(4).Width = 150
             .Columns(5).Width = 100
             .Columns(6).Width = 95

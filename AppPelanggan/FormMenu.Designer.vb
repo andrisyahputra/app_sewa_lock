@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMenu))
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -37,6 +37,7 @@ Partial Class FormMenu
         Me.btnJamLock = New System.Windows.Forms.Button()
         Me.btnUnit = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnTutup = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -89,7 +90,7 @@ Partial Class FormMenu
         Me.btnPelanggan.ForeColor = System.Drawing.Color.White
         Me.btnPelanggan.Image = Global.AppPelanggan.My.Resources.Resources.user
         Me.btnPelanggan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPelanggan.Location = New System.Drawing.Point(10, 293)
+        Me.btnPelanggan.Location = New System.Drawing.Point(12, 287)
         Me.btnPelanggan.Name = "btnPelanggan"
         Me.btnPelanggan.Size = New System.Drawing.Size(336, 63)
         Me.btnPelanggan.TabIndex = 8
@@ -230,12 +231,20 @@ Partial Class FormMenu
         Me.Button1.Text = "DATA USER"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'PanelMenu
+        '
+        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelMenu.Location = New System.Drawing.Point(354, 0)
+        Me.PanelMenu.Name = "PanelMenu"
+        Me.PanelMenu.Size = New System.Drawing.Size(1016, 749)
+        Me.PanelMenu.TabIndex = 47
+        '
         'btnTutup
         '
         Me.btnTutup.BackColor = System.Drawing.Color.Transparent
         Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
-        Me.btnTutup.Location = New System.Drawing.Point(1318, 0)
+        Me.btnTutup.Location = New System.Drawing.Point(1319, 3)
         Me.btnTutup.Name = "btnTutup"
         Me.btnTutup.Size = New System.Drawing.Size(50, 39)
         Me.btnTutup.TabIndex = 46
@@ -247,6 +256,7 @@ Partial Class FormMenu
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.btnTutup)
+        Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -273,10 +283,11 @@ Partial Class FormMenu
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnTutup As Label
     Friend WithEvents lbl_level As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents lbl_nama As Label
     Friend WithEvents btnPelanggan As Button
+    Friend WithEvents PanelMenu As Panel
+    Friend WithEvents btnTutup As Label
 End Class
