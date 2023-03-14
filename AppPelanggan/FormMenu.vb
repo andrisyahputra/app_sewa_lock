@@ -19,22 +19,22 @@ Public Class FormMenu
     End Sub
 
     Private Sub btnPelanggan_Click(sender As Object, e As EventArgs) Handles btnPelanggan.Click
-        btnTutup.Visible = False
+        'PanelAkses.Visible = False
         switchPanel(FormPelanggan)
     End Sub
     Private Sub btnUnit_Click(sender As Object, e As EventArgs) Handles btnUnit.Click
-        btnTutup.Visible = False
+        'PanelAkses.Visible = False
         'FormUnit.ShowDialog()
         switchPanel(FormUnit)
     End Sub
 
     Private Sub btnJamLock_Click(sender As Object, e As EventArgs) Handles btnJamLock.Click
-        btnTutup.Visible = False
+        'PanelAkses.Visible = False
         'FormUnit.ShowDialog()
         switchPanel(FormHistory)
     End Sub
 
-    Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles btnTutup.Click
+    Private Sub Label1_Click_1(sender As Object, e As EventArgs)
         Me.Close()
         FormLogin.Show()
     End Sub
@@ -72,5 +72,7 @@ Public Class FormMenu
 
     End Sub
 
+    Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

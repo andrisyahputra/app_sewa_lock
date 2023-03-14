@@ -22,9 +22,9 @@ Partial Class FormMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMenu))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnPelanggan = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -36,43 +36,29 @@ Partial Class FormMenu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnJamLock = New System.Windows.Forms.Button()
         Me.btnUnit = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnTutup = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.PanelAkses = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridHistory = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtJam = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtCari = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.PanelAkses.SuspendLayout()
+        CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(354, 749)
-        Me.Panel1.TabIndex = 3
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(354, 749)
-        Me.Panel2.TabIndex = 4
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel3.Controls.Add(Me.btnPelanggan)
-        Me.Panel3.Controls.Add(Me.PanelMenu)
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.btnJamLock)
@@ -80,7 +66,7 @@ Partial Class FormMenu
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(354, 749)
+        Me.Panel3.Size = New System.Drawing.Size(366, 749)
         Me.Panel3.TabIndex = 5
         '
         'btnPelanggan
@@ -109,7 +95,7 @@ Partial Class FormMenu
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Location = New System.Drawing.Point(0, 668)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(354, 81)
+        Me.Panel4.Size = New System.Drawing.Size(366, 81)
         Me.Panel4.TabIndex = 4
         '
         'lbl_level
@@ -172,7 +158,7 @@ Partial Class FormMenu
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 3, 3, 40)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(354, 100)
+        Me.Panel5.Size = New System.Drawing.Size(366, 100)
         Me.Panel5.TabIndex = 6
         '
         'Label2
@@ -200,7 +186,7 @@ Partial Class FormMenu
         Me.btnJamLock.Name = "btnJamLock"
         Me.btnJamLock.Size = New System.Drawing.Size(336, 63)
         Me.btnJamLock.TabIndex = 5
-        Me.btnJamLock.Text = "LOCK"
+        Me.btnJamLock.Text = "HISTORY"
         Me.btnJamLock.UseVisualStyleBackColor = False
         '
         'btnUnit
@@ -219,44 +205,153 @@ Partial Class FormMenu
         Me.btnUnit.Text = "DATA UNIT"
         Me.btnUnit.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Navy
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 391)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(336, 63)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "DATA USER"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'PanelMenu
         '
-        Me.PanelMenu.Location = New System.Drawing.Point(238, 615)
+        Me.PanelMenu.BackColor = System.Drawing.Color.LightGreen
+        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PanelMenu.Location = New System.Drawing.Point(977, 0)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(110, 72)
+        Me.PanelMenu.Size = New System.Drawing.Size(27, 749)
         Me.PanelMenu.TabIndex = 47
         '
         'btnTutup
         '
-        Me.btnTutup.BackColor = System.Drawing.Color.Transparent
+        Me.btnTutup.BackColor = System.Drawing.Color.Navy
         Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
-        Me.btnTutup.Location = New System.Drawing.Point(1319, 3)
+        Me.btnTutup.Location = New System.Drawing.Point(1313, 3)
         Me.btnTutup.Name = "btnTutup"
         Me.btnTutup.Size = New System.Drawing.Size(50, 39)
-        Me.btnTutup.TabIndex = 46
+        Me.btnTutup.TabIndex = 114
         '
-        'Panel6
+        'PanelAkses
         '
-        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(354, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1016, 749)
-        Me.Panel6.TabIndex = 47
+        Me.PanelAkses.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.PanelAkses.Controls.Add(Me.Button2)
+        Me.PanelAkses.Controls.Add(Me.Label3)
+        Me.PanelAkses.Controls.Add(Me.Button3)
+        Me.PanelAkses.Controls.Add(Me.DataGridHistory)
+        Me.PanelAkses.Controls.Add(Me.Label1)
+        Me.PanelAkses.Controls.Add(Me.txtJam)
+        Me.PanelAkses.Controls.Add(Me.Label11)
+        Me.PanelAkses.Controls.Add(Me.txtCari)
+        Me.PanelAkses.Controls.Add(Me.Label4)
+        Me.PanelAkses.Controls.Add(Me.PanelMenu)
+        Me.PanelAkses.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelAkses.Location = New System.Drawing.Point(366, 0)
+        Me.PanelAkses.Name = "PanelAkses"
+        Me.PanelAkses.Size = New System.Drawing.Size(1004, 749)
+        Me.PanelAkses.TabIndex = 123
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Navy
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Image = Global.AppPelanggan.My.Resources.Resources.setlock
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(64, 540)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(336, 63)
+        Me.Button2.TabIndex = 125
+        Me.Button2.Text = "BUKA"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 16.75!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(24, 110)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(104, 26)
+        Me.Label3.TabIndex = 126
+        Me.Label3.Text = "ID CARD"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Navy
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Image = Global.AppPelanggan.My.Resources.Resources.setlock
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(602, 540)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(336, 63)
+        Me.Button3.TabIndex = 130
+        Me.Button3.Text = "TUTUP"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'DataGridHistory
+        '
+        Me.DataGridHistory.AllowUserToAddRows = False
+        Me.DataGridHistory.AllowUserToDeleteRows = False
+        Me.DataGridHistory.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridHistory.Location = New System.Drawing.Point(27, 142)
+        Me.DataGridHistory.Name = "DataGridHistory"
+        Me.DataGridHistory.ReadOnly = True
+        Me.DataGridHistory.Size = New System.Drawing.Size(581, 359)
+        Me.DataGridHistory.TabIndex = 128
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Navy
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label1.Image = Global.AppPelanggan.My.Resources.Resources.close
+        Me.Label1.Location = New System.Drawing.Point(954, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 39)
+        Me.Label1.TabIndex = 123
+        '
+        'txtJam
+        '
+        Me.txtJam.AutoSize = True
+        Me.txtJam.BackColor = System.Drawing.Color.Transparent
+        Me.txtJam.Font = New System.Drawing.Font("Times New Roman", 16.75!)
+        Me.txtJam.ForeColor = System.Drawing.Color.White
+        Me.txtJam.Location = New System.Drawing.Point(22, 74)
+        Me.txtJam.Name = "txtJam"
+        Me.txtJam.Size = New System.Drawing.Size(56, 26)
+        Me.txtJam.TabIndex = 127
+        Me.txtJam.Text = "JAM"
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Navy
+        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(404, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(183, 55)
+        Me.Label11.TabIndex = 124
+        Me.Label11.Text = "AKSES"
+        '
+        'txtCari
+        '
+        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.Location = New System.Drawing.Point(144, 107)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(277, 29)
+        Me.txtCari.TabIndex = 129
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.Navy
+        Me.Label4.Location = New System.Drawing.Point(-3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(1026, 63)
+        Me.Label4.TabIndex = 131
         '
         'FormMenu
         '
@@ -264,40 +359,48 @@ Partial Class FormMenu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(1370, 749)
-        Me.Controls.Add(Me.Panel6)
+        Me.Controls.Add(Me.PanelAkses)
         Me.Controls.Add(Me.btnTutup)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FormMenu"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        Me.PanelAkses.ResumeLayout(False)
+        Me.PanelAkses.PerformLayout()
+        CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Timer1 As Timer
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnJamLock As Button
-    Friend WithEvents btnUnit As Button
+    Friend WithEvents btnPelanggan As Button
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label2 As Label
     Friend WithEvents lbl_level As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents lbl_nama As Label
-    Friend WithEvents btnPelanggan As Button
-    Friend WithEvents PanelMenu As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnJamLock As Button
+    Friend WithEvents btnUnit As Button
     Friend WithEvents btnTutup As Label
-    Friend WithEvents Panel6 As Panel
+    Friend WithEvents PanelMenu As Panel
+    Friend WithEvents PanelAkses As Panel
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents DataGridHistory As DataGridView
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtJam As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtCari As TextBox
+    Friend WithEvents Label4 As Label
 End Class

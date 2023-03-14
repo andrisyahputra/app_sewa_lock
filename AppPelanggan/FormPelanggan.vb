@@ -14,7 +14,7 @@ Public Class FormPelanggan
     Dim idNilai As String
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         Me.Close()
-        FormMenu.btnTutup.Visible = True
+        'FormMenu.PanelAkses.Visible = True
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

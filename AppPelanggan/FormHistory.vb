@@ -93,7 +93,7 @@ Public Class FormHistory
         Catch ex As Exception
             'MsgBox("tidak tampil data")
         End Try
-        FormMenu.btnTutup.Visible = True
+        'FormMenu.PanelAkses.Visible = True
         CBIDCard.Items.Clear()
         Me.Close()
     End Sub
