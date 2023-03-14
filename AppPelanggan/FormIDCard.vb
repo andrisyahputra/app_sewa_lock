@@ -225,16 +225,12 @@ Public Class FormIDCard
         FormHistory.ShowDialog()
     End Sub
 
-    Private Sub txtCari_Enter(sender As Object, e As EventArgs) Handles txtCari.Enter
-        pembayaran()
-        kirimhistory()
-    End Sub
 
-    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
+    Private Sub txtCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCari.KeyPress
+        If e.KeyChar = Chr(13) Then
 
-    End Sub
-
-    Private Sub txtCari_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCari.KeyDown
-
+            pembayaran()
+            kirimhistory()
+        End If
     End Sub
 End Class
