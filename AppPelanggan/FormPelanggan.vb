@@ -14,6 +14,7 @@ Public Class FormPelanggan
     Dim idNilai As String
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         Me.Close()
+        Call FormMenu.tampilMenu()
         'FormMenu.PanelAkses.Visible = True
     End Sub
 

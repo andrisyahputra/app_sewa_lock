@@ -6,6 +6,31 @@ Public Class FormMenu
     Dim imgdtunit As Bitmap
     Dim imghistory As Bitmap
 
+    Public Sub clearMenu()
+        btnTutup.Visible = False
+        txtCari.Visible = False
+        txtJam.Visible = False
+        Label3.Visible = False
+        DataGridHistory.Visible = False
+        Label11.Visible = False
+        Label4.Visible = False
+        Button2.Visible = False
+        Button3.Visible = False
+        lblTutup.Visible = False
+    End Sub
+    Public Sub tampilMenu()
+        btnTutup.Visible = True
+        txtCari.Visible = True
+        txtJam.Visible = True
+        Label3.Visible = True
+        DataGridHistory.Visible = True
+        Label11.Visible = True
+        Label4.Visible = True
+        Button2.Visible = True
+        Button3.Visible = True
+        lblTutup.Visible = True
+    End Sub
+
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs)
         FormTambahUser.ShowDialog()
@@ -20,23 +45,25 @@ Public Class FormMenu
 
     Private Sub btnPelanggan_Click(sender As Object, e As EventArgs) Handles btnPelanggan.Click
         'PanelAkses.Visible = False
+        clearMenu()
         switchPanel(FormPelanggan)
     End Sub
     Private Sub btnUnit_Click(sender As Object, e As EventArgs) Handles btnUnit.Click
         'PanelAkses.Visible = False
         'FormUnit.ShowDialog()
+        clearMenu()
         switchPanel(FormUnit)
     End Sub
 
     Private Sub btnJamLock_Click(sender As Object, e As EventArgs) Handles btnJamLock.Click
         'PanelAkses.Visible = False
         'FormUnit.ShowDialog()
+        clearMenu()
         switchPanel(FormHistory)
     End Sub
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs)
-        Me.Close()
-        FormLogin.Show()
+
     End Sub
 
     Private Sub KondisiAwal()
@@ -51,28 +78,17 @@ Public Class FormMenu
         btnUnit.Image = imgdtunit
         btnUnit.ImageAlign = ContentAlignment.MiddleLeft
     End Sub
-
-
-
-
-
     Private Sub Label5_Click(sender As Object, e As EventArgs)
         FormLaporPerbulan.ShowDialog()
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub btnHistory_Click(sender As Object, e As EventArgs)
         FormIDCard.ShowDialog()
     End Sub
 
-    Private Sub txtJam_TextChanged(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblTutup.Click
+        Me.Close()
+        FormLogin.Show()
     End Sub
 End Class

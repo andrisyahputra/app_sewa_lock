@@ -43,7 +43,7 @@ Partial Class FormMenu
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridHistory = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTutup = New System.Windows.Forms.Label()
         Me.txtJam = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
@@ -207,11 +207,11 @@ Partial Class FormMenu
         '
         'PanelMenu
         '
-        Me.PanelMenu.BackColor = System.Drawing.Color.LightGreen
+        Me.PanelMenu.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelMenu.Location = New System.Drawing.Point(977, 0)
+        Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(27, 749)
+        Me.PanelMenu.Size = New System.Drawing.Size(1004, 749)
         Me.PanelMenu.TabIndex = 47
         '
         'btnTutup
@@ -231,7 +231,7 @@ Partial Class FormMenu
         Me.PanelAkses.Controls.Add(Me.Label3)
         Me.PanelAkses.Controls.Add(Me.Button3)
         Me.PanelAkses.Controls.Add(Me.DataGridHistory)
-        Me.PanelAkses.Controls.Add(Me.Label1)
+        Me.PanelAkses.Controls.Add(Me.lblTutup)
         Me.PanelAkses.Controls.Add(Me.txtJam)
         Me.PanelAkses.Controls.Add(Me.Label11)
         Me.PanelAkses.Controls.Add(Me.txtCari)
@@ -301,15 +301,15 @@ Partial Class FormMenu
         Me.DataGridHistory.Size = New System.Drawing.Size(581, 359)
         Me.DataGridHistory.TabIndex = 128
         '
-        'Label1
+        'lblTutup
         '
-        Me.Label1.BackColor = System.Drawing.Color.Navy
-        Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label1.Image = Global.AppPelanggan.My.Resources.Resources.close
-        Me.Label1.Location = New System.Drawing.Point(954, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 39)
-        Me.Label1.TabIndex = 123
+        Me.lblTutup.BackColor = System.Drawing.Color.Navy
+        Me.lblTutup.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
+        Me.lblTutup.Location = New System.Drawing.Point(954, 3)
+        Me.lblTutup.Name = "lblTutup"
+        Me.lblTutup.Size = New System.Drawing.Size(50, 39)
+        Me.lblTutup.TabIndex = 123
         '
         'txtJam
         '
@@ -398,7 +398,7 @@ Partial Class FormMenu
     Friend WithEvents Label3 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridHistory As DataGridView
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTutup As Label
     Friend WithEvents txtJam As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents txtCari As TextBox

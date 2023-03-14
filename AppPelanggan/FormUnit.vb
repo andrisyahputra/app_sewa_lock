@@ -6,6 +6,7 @@ Public Class FormUnit
     End Sub
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         'FormMenu.PanelAkses.Visible = True
+        Call FormMenu.tampilMenu()
         Me.Close()
     End Sub
 

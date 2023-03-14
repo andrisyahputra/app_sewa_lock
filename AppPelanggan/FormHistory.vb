@@ -94,6 +94,7 @@ Public Class FormHistory
             'MsgBox("tidak tampil data")
         End Try
         'FormMenu.PanelAkses.Visible = True
+        Call FormMenu.tampilMenu()
         CBIDCard.Items.Clear()
         Me.Close()
     End Sub
