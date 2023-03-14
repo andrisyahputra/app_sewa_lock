@@ -55,6 +55,9 @@ Partial Class FormMenu
         CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Timer1
+        '
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.HotTrack
