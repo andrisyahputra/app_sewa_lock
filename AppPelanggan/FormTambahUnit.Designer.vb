@@ -282,7 +282,7 @@ Partial Class FormTambahUnit
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(88, 90)
         Me.Name = "FormTambahUnit"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormUnit"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

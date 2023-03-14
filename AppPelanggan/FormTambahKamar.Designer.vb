@@ -98,7 +98,7 @@ Partial Class FormTambahKamar
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(69, 382)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(117, 27)
@@ -107,7 +107,7 @@ Partial Class FormTambahKamar
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.LawnGreen
+        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -157,7 +157,7 @@ Partial Class FormTambahKamar
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(71, 209)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(175, 33)
@@ -208,7 +208,7 @@ Partial Class FormTambahKamar
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(73, 65)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(128, 33)
@@ -220,7 +220,7 @@ Partial Class FormTambahKamar
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(72, 248)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(182, 33)
@@ -232,7 +232,7 @@ Partial Class FormTambahKamar
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(71, 175)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(164, 33)
@@ -244,7 +244,7 @@ Partial Class FormTambahKamar
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(72, 108)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(104, 33)
@@ -286,7 +286,7 @@ Partial Class FormTambahKamar
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(72, 139)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(140, 33)
@@ -306,7 +306,7 @@ Partial Class FormTambahKamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.YellowGreen
+        Me.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.ClientSize = New System.Drawing.Size(636, 686)
         Me.Controls.Add(Me.txtHBulanan)
         Me.Controls.Add(Me.txtNUnit)
@@ -332,6 +332,7 @@ Partial Class FormTambahKamar
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(653, 20)
         Me.Name = "FormTambahKamar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormTambahKamar"

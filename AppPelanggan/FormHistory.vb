@@ -1,12 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FormHistory
-    Dim peringatan As String
-    Dim txtjatuhtempo As Date
-    Dim txtBayarr As String
-    Dim DateBTempoo As Date
-    Dim txtjambuka As String
-    Dim txtjamtutup As String
-    Dim jamsekarang As String
     Private Sub comboboxIDCard()
         Try
             Call KoneksiKeDatabase()
@@ -100,6 +93,7 @@ Public Class FormHistory
         Catch ex As Exception
             'MsgBox("tidak tampil data")
         End Try
+        FormMenu.btnTutup.Visible = True
         CBIDCard.Items.Clear()
         Me.Close()
     End Sub

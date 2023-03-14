@@ -136,6 +136,7 @@ Public Class FormIDCard
         End Try
 
         'tx.Items.Clear()
+        'FormMenu.btnTutup.Visible = True
         Me.Close()
     End Sub
     Private Sub CBIDCard_SelectedIndexChanged(sender As Object, e As EventArgs)

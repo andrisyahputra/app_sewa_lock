@@ -2,7 +2,7 @@
 
 Public Class FormUnit
     Private Sub btnJamLock_Click(sender As Object, e As EventArgs) Handles btnUnit.Click
-        FormTambahUnit.Show()
+        FormTambahUnit.ShowDialog()
     End Sub
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         FormMenu.btnTutup.Visible = True

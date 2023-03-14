@@ -29,7 +29,9 @@ Public Class FormMenu
     End Sub
 
     Private Sub btnJamLock_Click(sender As Object, e As EventArgs) Handles btnJamLock.Click
-        FormIDCard.ShowDialog()
+        btnTutup.Visible = False
+        'FormUnit.ShowDialog()
+        switchPanel(FormHistory)
     End Sub
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles btnTutup.Click

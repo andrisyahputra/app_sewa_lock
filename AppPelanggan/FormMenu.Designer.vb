@@ -39,6 +39,7 @@ Partial Class FormMenu
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.btnTutup = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -71,6 +72,7 @@ Partial Class FormMenu
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel3.Controls.Add(Me.btnPelanggan)
+        Me.Panel3.Controls.Add(Me.PanelMenu)
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.btnJamLock)
@@ -233,10 +235,9 @@ Partial Class FormMenu
         '
         'PanelMenu
         '
-        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelMenu.Location = New System.Drawing.Point(354, 0)
+        Me.PanelMenu.Location = New System.Drawing.Point(238, 615)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(1016, 749)
+        Me.PanelMenu.Size = New System.Drawing.Size(110, 72)
         Me.PanelMenu.TabIndex = 47
         '
         'btnTutup
@@ -249,14 +250,22 @@ Partial Class FormMenu
         Me.btnTutup.Size = New System.Drawing.Size(50, 39)
         Me.btnTutup.TabIndex = 46
         '
+        'Panel6
+        '
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel6.Location = New System.Drawing.Point(354, 0)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(1016, 749)
+        Me.Panel6.TabIndex = 47
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.btnTutup)
-        Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -290,4 +299,5 @@ Partial Class FormMenu
     Friend WithEvents btnPelanggan As Button
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents btnTutup As Label
+    Friend WithEvents Panel6 As Panel
 End Class
