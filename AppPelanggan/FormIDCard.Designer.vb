@@ -28,13 +28,13 @@ Partial Class FormIDCard
         Me.btnTutup = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridHistory = New System.Windows.Forms.DataGridView()
+        Me.DataGridLock = New System.Windows.Forms.DataGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.txtJam = New System.Windows.Forms.Label()
         Me.btnUnit = New System.Windows.Forms.Button()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridLock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -84,17 +84,17 @@ Partial Class FormIDCard
         Me.Label1.TabIndex = 52
         Me.Label1.Text = "ID CARD"
         '
-        'DataGridHistory
+        'DataGridLock
         '
-        Me.DataGridHistory.AllowUserToAddRows = False
-        Me.DataGridHistory.AllowUserToDeleteRows = False
-        Me.DataGridHistory.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridHistory.Location = New System.Drawing.Point(12, 150)
-        Me.DataGridHistory.Name = "DataGridHistory"
-        Me.DataGridHistory.ReadOnly = True
-        Me.DataGridHistory.Size = New System.Drawing.Size(1113, 433)
-        Me.DataGridHistory.TabIndex = 93
+        Me.DataGridLock.AllowUserToAddRows = False
+        Me.DataGridLock.AllowUserToDeleteRows = False
+        Me.DataGridLock.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridLock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridLock.Location = New System.Drawing.Point(12, 150)
+        Me.DataGridLock.Name = "DataGridLock"
+        Me.DataGridLock.ReadOnly = True
+        Me.DataGridLock.Size = New System.Drawing.Size(1113, 433)
+        Me.DataGridLock.TabIndex = 93
         '
         'Timer1
         '
@@ -142,7 +142,7 @@ Partial Class FormIDCard
         Me.ClientSize = New System.Drawing.Size(1137, 595)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.btnUnit)
-        Me.Controls.Add(Me.DataGridHistory)
+        Me.Controls.Add(Me.DataGridLock)
         Me.Controls.Add(Me.txtJam)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -153,7 +153,7 @@ Partial Class FormIDCard
         Me.Text = "FormHistory"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridLock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -162,7 +162,7 @@ Partial Class FormIDCard
     Friend WithEvents Label11 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnTutup As Label
-    Friend WithEvents DataGridHistory As DataGridView
+    Friend WithEvents DataGridLock As DataGridView
     Friend WithEvents Timer1 As Timer
     Friend WithEvents txtJam As Label
     Friend WithEvents btnUnit As Button

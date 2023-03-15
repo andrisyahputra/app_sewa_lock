@@ -185,7 +185,7 @@ Public Class FormLock
         Dim idkamar As String
 
         Call KoneksiKeDatabase()
-        cmd = New MySqlCommand("SELECT * FROM relasipelanggan where id_pelanggan='" & CBIDP.Text & "' and sts='ada'", Conn)
+        cmd = New MySqlCommand("SELECT * FROM relasipelanggan1 where id_pelanggan='" & CBIDP.Text & "' and sts='ada'", Conn)
         RD = cmd.ExecuteReader
         RD.Read()
         If RD.HasRows = True Then
@@ -203,7 +203,7 @@ Public Class FormLock
         Dim idkamar As String
 
         Call KoneksiKeDatabase()
-        cmd = New MySqlCommand("SELECT * FROM relasipelanggan where id_pelanggan='" & CBIDP.Text & "' and sts='penuh'", Conn)
+        cmd = New MySqlCommand("SELECT * FROM relasipelanggan1 where id_pelanggan='" & CBIDP.Text & "' and sts='penuh'", Conn)
         RD = cmd.ExecuteReader
         RD.Read()
         If RD.HasRows = True Then
@@ -488,7 +488,7 @@ Public Class FormLock
         Dim a As Integer
         Try
             KoneksiKeDatabase()
-            Query = "SELECT * FROM relasipelanggan WHERE nama_pelanggan LIKE '%" & Trim(txtCari.Text) & "%' OR id_kendaraan LIKE '%" & Trim(txtCari.Text) & "%'"
+            Query = "SELECT * FROM relasipelanggan1 WHERE nama_pelanggan LIKE '%" & Trim(txtCari.Text) & "%' OR id_kendaraan LIKE '%" & Trim(txtCari.Text) & "%'"
             daData = New MySqlDataAdapter(Query, Conn)
             dsData = New DataSet
             daData.Fill(dsData)

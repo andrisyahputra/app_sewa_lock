@@ -62,7 +62,7 @@ Partial Class FormHistory
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(386, 0)
+        Me.Label11.Location = New System.Drawing.Point(417, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(205, 55)
         Me.Label11.TabIndex = 48
@@ -74,17 +74,17 @@ Partial Class FormHistory
         Me.DataGridHistory.AllowUserToDeleteRows = False
         Me.DataGridHistory.BackgroundColor = System.Drawing.Color.White
         Me.DataGridHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridHistory.Location = New System.Drawing.Point(17, 366)
+        Me.DataGridHistory.Location = New System.Drawing.Point(17, 341)
         Me.DataGridHistory.Name = "DataGridHistory"
         Me.DataGridHistory.ReadOnly = True
-        Me.DataGridHistory.Size = New System.Drawing.Size(973, 51)
+        Me.DataGridHistory.Size = New System.Drawing.Size(973, 76)
         Me.DataGridHistory.TabIndex = 98
         '
         'CBIDCard
         '
         Me.CBIDCard.Font = New System.Drawing.Font("Times New Roman", 11.25!)
         Me.CBIDCard.FormattingEnabled = True
-        Me.CBIDCard.Location = New System.Drawing.Point(477, 315)
+        Me.CBIDCard.Location = New System.Drawing.Point(449, 299)
         Me.CBIDCard.Name = "CBIDCard"
         Me.CBIDCard.Size = New System.Drawing.Size(142, 25)
         Me.CBIDCard.TabIndex = 97
@@ -95,7 +95,7 @@ Partial Class FormHistory
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 16.75!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(367, 315)
+        Me.Label1.Location = New System.Drawing.Point(467, 270)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(104, 26)
         Me.Label1.TabIndex = 95

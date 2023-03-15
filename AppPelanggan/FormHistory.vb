@@ -23,11 +23,11 @@ Public Class FormHistory
             Else
                 Call KoneksiKeDatabase()
 
-                Query = "SELECT * FROM relasicard WHERE id_card LIKE '%" & Trim(CBIDCard.Text) & "%'"
+                Query = "SELECT * FROM relasicard1 WHERE id_card LIKE '%" & Trim(CBIDCard.Text) & "%'"
                 daData = New MySqlDataAdapter(Query, Conn)
                 dsData = New DataSet
-                daData.Fill(dsData, "relasicard")
-                DataGridHistory.DataSource = dsData.Tables("relasicard")
+                daData.Fill(dsData, "relasicard1")
+                DataGridHistory.DataSource = dsData.Tables("relasicard1")
 
                 'DataGridHistory.Columns(0).Width = 110
                 'DataGridHistory.Columns(1).Width = 100
@@ -87,7 +87,7 @@ Public Class FormHistory
         End Try
     End Sub
 
-    Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
+    Public Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         Try
             DataGridHistory.DataSource.clear()
         Catch ex As Exception
@@ -95,14 +95,16 @@ Public Class FormHistory
         End Try
         'FormMenu.PanelAkses.Visible = True
         Call FormMenu.tampilMenu()
+        FormMenu.FormMenu_Load(sender, e)
+        Call FormMenu.tampilMenu()
         CBIDCard.Items.Clear()
         Me.Close()
     End Sub
 
-    Private Sub FormHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub FormHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KoneksiKeDatabase()
-        CBIDCard.DropDownStyle = ComboBoxStyle.DropDownList
         comboboxIDCard()
+        CBIDCard.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
     Private Sub CBIDCard_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBIDCard.SelectedIndexChanged

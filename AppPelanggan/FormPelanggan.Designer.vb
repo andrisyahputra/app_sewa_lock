@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormPelanggan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormPelanggan
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPelanggan))
@@ -28,20 +28,19 @@ Partial Class FormPelanggan
         Me.lvpelanggan = New System.Windows.Forms.ListView()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtHargaSw = New System.Windows.Forms.TextBox()
+        Me.DateJTempo = New System.Windows.Forms.DateTimePicker()
+        Me.txtTempo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtKamar = New System.Windows.Forms.TextBox()
         Me.txtUnit = New System.Windows.Forms.TextBox()
         Me.CBIDUnit = New System.Windows.Forms.ComboBox()
-        Me.DateJTempo = New System.Windows.Forms.DateTimePicker()
         Me.DateKendaraan = New System.Windows.Forms.DateTimePicker()
         Me.DateBayar = New System.Windows.Forms.DateTimePicker()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtHarga = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtKendaraa = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -113,20 +112,19 @@ Partial Class FormPelanggan
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Navy
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtHargaSw)
+        Me.GroupBox1.Controls.Add(Me.DateJTempo)
+        Me.GroupBox1.Controls.Add(Me.txtTempo)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtKamar)
         Me.GroupBox1.Controls.Add(Me.txtUnit)
         Me.GroupBox1.Controls.Add(Me.CBIDUnit)
-        Me.GroupBox1.Controls.Add(Me.DateJTempo)
         Me.GroupBox1.Controls.Add(Me.DateKendaraan)
         Me.GroupBox1.Controls.Add(Me.DateBayar)
         Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.txtHarga)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.txtKendaraa)
-        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label11)
@@ -147,21 +145,46 @@ Partial Class FormPelanggan
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Pelanggan"
         '
-        'TextBox1
+        'txtHargaSw
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(714, 149)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 25)
-        Me.TextBox1.TabIndex = 94
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtHargaSw.BackColor = System.Drawing.Color.Black
+        Me.txtHargaSw.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtHargaSw.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHargaSw.ForeColor = System.Drawing.Color.Orange
+        Me.txtHargaSw.Location = New System.Drawing.Point(644, 246)
+        Me.txtHargaSw.Multiline = True
+        Me.txtHargaSw.Name = "txtHargaSw"
+        Me.txtHargaSw.ReadOnly = True
+        Me.txtHargaSw.Size = New System.Drawing.Size(195, 25)
+        Me.txtHargaSw.TabIndex = 48
+        Me.txtHargaSw.Text = "0"
+        Me.txtHargaSw.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'DateJTempo
+        '
+        Me.DateJTempo.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateJTempo.Font = New System.Drawing.Font("Times New Roman", 14.25!)
+        Me.DateJTempo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateJTempo.Location = New System.Drawing.Point(697, 196)
+        Me.DateJTempo.Name = "DateJTempo"
+        Me.DateJTempo.Size = New System.Drawing.Size(142, 29)
+        Me.DateJTempo.TabIndex = 95
+        '
+        'txtTempo
+        '
+        Me.txtTempo.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTempo.Location = New System.Drawing.Point(644, 197)
+        Me.txtTempo.Name = "txtTempo"
+        Me.txtTempo.Size = New System.Drawing.Size(46, 25)
+        Me.txtTempo.TabIndex = 94
+        Me.txtTempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(501, 150)
+        Me.Label2.Location = New System.Drawing.Point(423, 199)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 27)
         Me.Label2.TabIndex = 93
@@ -192,24 +215,14 @@ Partial Class FormPelanggan
         Me.CBIDUnit.Size = New System.Drawing.Size(70, 25)
         Me.CBIDUnit.TabIndex = 88
         '
-        'DateJTempo
-        '
-        Me.DateJTempo.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateJTempo.Font = New System.Drawing.Font("Times New Roman", 14.25!)
-        Me.DateJTempo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateJTempo.Location = New System.Drawing.Point(713, 262)
-        Me.DateJTempo.Name = "DateJTempo"
-        Me.DateJTempo.Size = New System.Drawing.Size(150, 29)
-        Me.DateJTempo.TabIndex = 87
-        '
         'DateKendaraan
         '
         Me.DateKendaraan.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateKendaraan.Font = New System.Drawing.Font("Times New Roman", 14.25!)
         Me.DateKendaraan.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateKendaraan.Location = New System.Drawing.Point(714, 57)
+        Me.DateKendaraan.Location = New System.Drawing.Point(643, 75)
         Me.DateKendaraan.Name = "DateKendaraan"
-        Me.DateKendaraan.Size = New System.Drawing.Size(150, 29)
+        Me.DateKendaraan.Size = New System.Drawing.Size(195, 29)
         Me.DateKendaraan.TabIndex = 87
         '
         'DateBayar
@@ -217,9 +230,9 @@ Partial Class FormPelanggan
         Me.DateBayar.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateBayar.Font = New System.Drawing.Font("Times New Roman", 14.25!)
         Me.DateBayar.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateBayar.Location = New System.Drawing.Point(713, 222)
+        Me.DateBayar.Location = New System.Drawing.Point(644, 158)
         Me.DateBayar.Name = "DateBayar"
-        Me.DateBayar.Size = New System.Drawing.Size(150, 29)
+        Me.DateBayar.Size = New System.Drawing.Size(195, 29)
         Me.DateBayar.TabIndex = 87
         '
         'Label17
@@ -233,32 +246,23 @@ Partial Class FormPelanggan
         Me.Label17.TabIndex = 85
         Me.Label17.Text = "Tipe Unit"
         '
-        'txtHarga
-        '
-        Me.txtHarga.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHarga.Location = New System.Drawing.Point(713, 186)
-        Me.txtHarga.Name = "txtHarga"
-        Me.txtHarga.Size = New System.Drawing.Size(151, 25)
-        Me.txtHarga.TabIndex = 84
-        Me.txtHarga.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(501, 187)
+        Me.Label16.Location = New System.Drawing.Point(423, 244)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(70, 27)
+        Me.Label16.Size = New System.Drawing.Size(127, 27)
         Me.Label16.TabIndex = 83
-        Me.Label16.Text = "Harga"
+        Me.Label16.Text = "Harga Sewa"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(501, 110)
+        Me.Label15.Location = New System.Drawing.Point(423, 120)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(118, 27)
         Me.Label15.TabIndex = 82
@@ -272,23 +276,12 @@ Partial Class FormPelanggan
         Me.txtKendaraa.Size = New System.Drawing.Size(197, 25)
         Me.txtKendaraa.TabIndex = 77
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(501, 262)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(214, 27)
-        Me.Label12.TabIndex = 76
-        Me.Label12.Text = "Tanggal Jatuh Tempo"
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(501, 57)
+        Me.Label14.Location = New System.Drawing.Point(423, 75)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(197, 27)
         Me.Label14.TabIndex = 75
@@ -310,7 +303,7 @@ Partial Class FormPelanggan
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(501, 224)
+        Me.Label11.Location = New System.Drawing.Point(423, 160)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(150, 27)
         Me.Label11.TabIndex = 73
@@ -329,9 +322,9 @@ Partial Class FormPelanggan
         '
         Me.CBBayar.Font = New System.Drawing.Font("Times New Roman", 11.25!)
         Me.CBBayar.FormattingEnabled = True
-        Me.CBBayar.Location = New System.Drawing.Point(713, 106)
+        Me.CBBayar.Location = New System.Drawing.Point(644, 120)
         Me.CBBayar.Name = "CBBayar"
-        Me.CBBayar.Size = New System.Drawing.Size(150, 25)
+        Me.CBBayar.Size = New System.Drawing.Size(195, 25)
         Me.CBBayar.TabIndex = 71
         '
         'Label4
@@ -635,15 +628,12 @@ Partial Class FormPelanggan
     Friend WithEvents txtKamar As TextBox
     Friend WithEvents txtUnit As TextBox
     Friend WithEvents CBIDUnit As ComboBox
-    Friend WithEvents DateJTempo As DateTimePicker
     Friend WithEvents DateKendaraan As DateTimePicker
     Friend WithEvents DateBayar As DateTimePicker
     Friend WithEvents Label17 As Label
-    Friend WithEvents txtHarga As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents txtKendaraa As TextBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label11 As Label
@@ -668,7 +658,9 @@ Partial Class FormPelanggan
     Friend WithEvents BtnTambah As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnJamLock As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtTempo As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnTutup As Label
+    Friend WithEvents DateJTempo As DateTimePicker
+    Friend WithEvents txtHargaSw As TextBox
 End Class

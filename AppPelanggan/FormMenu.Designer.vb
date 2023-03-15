@@ -42,7 +42,7 @@ Partial Class FormMenu
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.DataGridHistory = New System.Windows.Forms.DataGridView()
+        Me.DataGridLock = New System.Windows.Forms.DataGridView()
         Me.lblTutup = New System.Windows.Forms.Label()
         Me.txtJam = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -52,7 +52,7 @@ Partial Class FormMenu
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.PanelAkses.SuspendLayout()
-        CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridLock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -233,7 +233,7 @@ Partial Class FormMenu
         Me.PanelAkses.Controls.Add(Me.Button2)
         Me.PanelAkses.Controls.Add(Me.Label3)
         Me.PanelAkses.Controls.Add(Me.Button3)
-        Me.PanelAkses.Controls.Add(Me.DataGridHistory)
+        Me.PanelAkses.Controls.Add(Me.DataGridLock)
         Me.PanelAkses.Controls.Add(Me.lblTutup)
         Me.PanelAkses.Controls.Add(Me.txtJam)
         Me.PanelAkses.Controls.Add(Me.Label11)
@@ -292,17 +292,17 @@ Partial Class FormMenu
         Me.Button3.Text = "TUTUP"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'DataGridHistory
+        'DataGridLock
         '
-        Me.DataGridHistory.AllowUserToAddRows = False
-        Me.DataGridHistory.AllowUserToDeleteRows = False
-        Me.DataGridHistory.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridHistory.Location = New System.Drawing.Point(27, 142)
-        Me.DataGridHistory.Name = "DataGridHistory"
-        Me.DataGridHistory.ReadOnly = True
-        Me.DataGridHistory.Size = New System.Drawing.Size(581, 359)
-        Me.DataGridHistory.TabIndex = 128
+        Me.DataGridLock.AllowUserToAddRows = False
+        Me.DataGridLock.AllowUserToDeleteRows = False
+        Me.DataGridLock.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridLock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridLock.Location = New System.Drawing.Point(27, 142)
+        Me.DataGridLock.Name = "DataGridLock"
+        Me.DataGridLock.ReadOnly = True
+        Me.DataGridLock.Size = New System.Drawing.Size(581, 359)
+        Me.DataGridLock.TabIndex = 128
         '
         'lblTutup
         '
@@ -378,7 +378,7 @@ Partial Class FormMenu
         Me.Panel5.PerformLayout()
         Me.PanelAkses.ResumeLayout(False)
         Me.PanelAkses.PerformLayout()
-        CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridLock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -400,7 +400,7 @@ Partial Class FormMenu
     Friend WithEvents Button2 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents DataGridHistory As DataGridView
+    Friend WithEvents DataGridLock As DataGridView
     Friend WithEvents lblTutup As Label
     Friend WithEvents txtJam As Label
     Friend WithEvents Label11 As Label
