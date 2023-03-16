@@ -45,3 +45,9 @@ C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\obj\Debug\AppPel
 C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\obj\Debug\AppPelanggan.FormLock.resources
 C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\obj\Debug\AppPelanggan.FormPelanggan.resources
 C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\obj\Debug\AppPelanggan.FormIDCard.resources
+C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\bin\Debug\AForge.dll
+C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\bin\Debug\AForge.Video.dll
+C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\bin\Debug\AForge.xml
+C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\bin\Debug\AForge.Video.xml
+C:\Users\Andri Syahputra\source\repos\AppPelanggan\AppPelanggan\bin\Debug\AForge.Video.DirectShow.xml

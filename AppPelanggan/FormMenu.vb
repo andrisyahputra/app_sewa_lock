@@ -1,8 +1,16 @@
-﻿
+﻿Imports AForge
+Imports AForge.Video
+Imports AForge.Video.DirectShow
+Imports System.IO
 
 Imports MySql.Data.MySqlClient
 
 Public Class FormMenu
+
+    Dim CAMARA As VideoCaptureDevice
+    Dim BMP As Bitmap
+    Dim Cap As String = "Capture"
+
 
     Dim imgsetlock As Bitmap
     Dim imgdtunit As Bitmap
@@ -15,8 +23,128 @@ Public Class FormMenu
     Dim txtjamtutup As String
     Dim jamsekarang As String
 
+    'camera
+    Public Sub setcamera()
+        btnNo.Visible = False
+        btnYes.Visible = False
+        Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+
+        If CAMARAS.ShowDialog() = DialogResult.OK Then
+            CAMARA = CAMARAS.VideoDevice
+            AddHandler CAMARA.NewFrame, New NewFrameEventHandler(AddressOf CAPTURAR)
+            CAMARA.Start()
+
+        Else
+
+            End
+
+        End If
+    End Sub
+    Private Sub CAPTURAR(sender As Object, eventArgs As NewFrameEventArgs)
+
+        BMP = DirectCast(eventArgs.Frame.Clone(), Bitmap)
+        pickamera.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
+
+    End Sub
+    Private Sub jabretKamera_Click(sender As Object, e As EventArgs) Handles jabretKamera.Click
+        If Cap = "Capture" Then
+            btnNo.Visible = True
+            btnYes.Visible = True
+            jabretKamera.Visible = False
+            CAMARA.Stop()
+            Cap = "Start"
+        ElseIf Cap = "Start" Then
+            Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+            CAMARA.Start()
+            btnNo.Visible = False
+            btnYes.Visible = False
+            Cap = "Capture"
+        End If
+    End Sub
+    Private Sub btnNo_Click(sender As Object, e As EventArgs) Handles btnNo.Click
+        Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+        CAMARA.Start()
+        btnNo.Visible = False
+        btnYes.Visible = False
+        jabretKamera.Visible = True
+        Cap = "Capture"
+    End Sub
+    Private Sub btnYes_Click(sender As Object, e As EventArgs) Handles btnYes.Click
+        Dim SD As New SaveFileDialog
+        'SD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
+        'SD.FileName = "Visual Capture " & Date.Now.ToString("MM/dd/yy")
+        SD.FileName = "Visual Capture " & Date.Now.ToString("MMddyy")
+        SD.SupportMultiDottedExtensions = True
+        SD.AddExtension = True
+        SD.Filter = "JPG File|*.jpg"
+        If SD.ShowDialog() = DialogResult.OK Then
+            Try
+                pickamera.Image.Save(SD.FileName, Imaging.ImageFormat.Jpeg)
+                Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+                CAMARA.Start()
+                btnNo.Visible = False
+                btnYes.Visible = False
+                jabretKamera.Visible = True
+                Cap = "Capture"
+            Catch ex As Exception
+
+            End Try
+        Else
+            Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+            CAMARA.Start()
+            btnNo.Visible = False
+            btnYes.Visible = False
+            jabretKamera.Visible = True
+            Cap = "Capture"
+        End If
+    End Sub
+
+
+    Private Sub tangkapcamera()
+        Dim SD As New SaveFileDialog
+        SD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
+        'SD.FileName = "Visual Capture " & Date.Now.ToString("MM/dd/yy")
+        SD.FileName = "Visual Capture " & Date.Now.ToString("MMddyy")
+        SD.SupportMultiDottedExtensions = True
+        SD.AddExtension = True
+        SD.Filter = "JPG File|*.jpg"
+        If SD.ShowDialog() = DialogResult.OK Then
+            Try
+                pickamera.Image.Save(SD.FileName, Imaging.ImageFormat.Jpeg)
+                Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+                CAMARA.Start()
+                btnNo.Visible = False
+                btnYes.Visible = False
+                jabretKamera.Visible = True
+                Cap = "Capture"
+            Catch ex As Exception
+
+            End Try
+        Else
+            Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+            CAMARA.Start()
+            btnNo.Visible = False
+            btnYes.Visible = False
+            jabretKamera.Visible = True
+            Cap = "Capture"
+        End If
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+    'akhir camera
+
     'per akses
     Private Sub pembayaran()
+
         Try
             Call KoneksiKeDatabase()
             Query = "Select * from relasicard1 where id_card='" & txtCari.Text & "'"
@@ -29,6 +157,7 @@ Public Class FormMenu
                     txtjambuka = RD("jam_masuk")
                     txtjamtutup = RD("jam_keluar")
                 Loop
+
             Else
 
                 'MsgBox("Pelanggan Belum tersedia")
@@ -133,6 +262,11 @@ Public Class FormMenu
         Button2.Visible = False
         Button3.Visible = False
         lblTutup.Visible = False
+        pickamera.Visible = False
+        btnNo.Visible = False
+        btnYes.Visible = False
+        jabretKamera.Visible = False
+        CAMARA.Stop()
     End Sub
     Public Sub tampilMenu()
         btnTutup.Visible = True
@@ -145,6 +279,12 @@ Public Class FormMenu
         Button2.Visible = True
         Button3.Visible = True
         lblTutup.Visible = True
+        pickamera.Visible = True
+        btnNo.Visible = True
+        btnYes.Visible = True
+        jabretKamera.Visible = True
+        Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
+        CAMARA.Start()
 
     End Sub
 
@@ -212,6 +352,8 @@ Public Class FormMenu
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblTutup.Click
         Me.Close()
         FormLogin.Show()
+        CAMARA.Stop()
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -260,22 +402,49 @@ Public Class FormMenu
 
             Else
                 Call KoneksiKeDatabase()
-                Query = "INSERT INTO tbl_history values ('','" & txtCari.Text & "','lunas','" & txtJam.Text & "','" & txtJam.Text & "')"
-                daData = New MySqlDataAdapter(Query, Conn)
-                dsData = New DataSet
-                daData.Fill(dsData)
-                MsgBox("Input data berhasil")
+                cmd = New MySqlCommand
+                cmd.Connection = Conn
+                Query = "INSERT INTO tbl_history (`id`, `id_card`, `pembayaran`, `tgl_k_buka`, `tgl_k_tutup`, `img_history`) VALUES ('','" & txtCari.Text & "','lunas','" & txtJam.Text & "','" & txtJam.Text & "',@Img)"
+                Dim ms As New MemoryStream
+                Dim bmpImage As New Bitmap(pickamera.Image)
+                bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+                Dim data As Byte() = ms.GetBuffer()
+                Dim p As New MySqlParameter("@Img", MySqlDbType.Blob)
+                p.Value = data
+                cmd.Parameters.Add(p)
+                cmd.CommandText = Query
+                cmd.ExecuteNonQuery()
                 tabelPerCard()
             End If
         Catch ex As Exception
-            MsgBox("Tidak bisa di tambah!", MsgBoxStyle.Critical, "Error")
+            MessageBox.Show("ERORR" & ex.Message, "ERORR", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
     Private Sub txtCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCari.KeyPress
-        If e.KeyChar = Chr(13) Then
+        'If e.KeyChar = Chr(13) Then
 
-            pembayaran()
-            kirimhistory()
+        '    pembayaran()
+        '    kirimhistory()
+        'End If
+        If e.KeyChar = Chr(13) Then
+            Call KoneksiKeDatabase()
+            Query = "Select * from relasicard1 where id_card='" & txtCari.Text & "'"
+            cmd = New MySqlCommand(Query, Conn)
+            RD = cmd.ExecuteReader
+            If RD.HasRows = True Then
+                Do While RD.Read
+                    txtjatuhtempo = RD.Item("tgl_jatuh_tempo")
+                    txtBayarr = RD.Item("tipe_bayar")
+                    txtjambuka = RD("jam_masuk")
+                    txtjamtutup = RD("jam_keluar")
+                    CAMARA.Stop()
+                Loop
+                kirimhistory()
+            Else
+                txtCari.Text = ""
+                txtCari.Focus()
+                MessageBox.Show("ID CARD PELANGGAN TIDAK DITEMUKAN!!!")
+            End If
         End If
     End Sub
 
@@ -288,5 +457,13 @@ Public Class FormMenu
         End Try
         KoneksiKeDatabase()
         Timer1.Start()
+    End Sub
+
+    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
+
+    End Sub
+
+    Private Sub FormMenu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        CAMARA.Stop()
     End Sub
 End Class

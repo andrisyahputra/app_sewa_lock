@@ -17,6 +17,7 @@ Public Class FormLogin
                     FormMenu.lbl_nama.Text = RD.Item("nama_lengkap")
                     FormPelanggan.txtKasir.Text = RD.Item("nama_lengkap")
                     FormMenu.lbl_level.Text = RD.Item("lvl")
+                    FormMenu.setcamera()
                     Me.Hide()
                     FormMenu.Show()
                 Else
@@ -33,6 +34,7 @@ Public Class FormLogin
     End Sub
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
     End Sub
 

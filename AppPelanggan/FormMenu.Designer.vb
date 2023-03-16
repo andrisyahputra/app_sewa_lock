@@ -37,8 +37,11 @@ Partial Class FormMenu
         Me.btnJamLock = New System.Windows.Forms.Button()
         Me.btnUnit = New System.Windows.Forms.Button()
         Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.btnTutup = New System.Windows.Forms.Label()
         Me.PanelAkses = New System.Windows.Forms.Panel()
+        Me.btnNo = New System.Windows.Forms.Button()
+        Me.btnYes = New System.Windows.Forms.Button()
+        Me.jabretKamera = New System.Windows.Forms.Label()
+        Me.pickamera = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -48,10 +51,12 @@ Partial Class FormMenu
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnTutup = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.PanelAkses.SuspendLayout()
+        CType(Me.pickamera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridLock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -217,19 +222,13 @@ Partial Class FormMenu
         Me.PanelMenu.Size = New System.Drawing.Size(1004, 749)
         Me.PanelMenu.TabIndex = 47
         '
-        'btnTutup
-        '
-        Me.btnTutup.BackColor = System.Drawing.Color.Navy
-        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
-        Me.btnTutup.Location = New System.Drawing.Point(1313, 3)
-        Me.btnTutup.Name = "btnTutup"
-        Me.btnTutup.Size = New System.Drawing.Size(50, 39)
-        Me.btnTutup.TabIndex = 114
-        '
         'PanelAkses
         '
         Me.PanelAkses.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.PanelAkses.Controls.Add(Me.btnNo)
+        Me.PanelAkses.Controls.Add(Me.btnYes)
+        Me.PanelAkses.Controls.Add(Me.jabretKamera)
+        Me.PanelAkses.Controls.Add(Me.pickamera)
         Me.PanelAkses.Controls.Add(Me.Button2)
         Me.PanelAkses.Controls.Add(Me.Label3)
         Me.PanelAkses.Controls.Add(Me.Button3)
@@ -245,6 +244,43 @@ Partial Class FormMenu
         Me.PanelAkses.Name = "PanelAkses"
         Me.PanelAkses.Size = New System.Drawing.Size(1004, 749)
         Me.PanelAkses.TabIndex = 123
+        '
+        'btnNo
+        '
+        Me.btnNo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnNo.Image = Global.AppPelanggan.My.Resources.Resources.closecamera
+        Me.btnNo.Location = New System.Drawing.Point(774, 478)
+        Me.btnNo.Name = "btnNo"
+        Me.btnNo.Size = New System.Drawing.Size(32, 24)
+        Me.btnNo.TabIndex = 134
+        Me.btnNo.UseVisualStyleBackColor = True
+        '
+        'btnYes
+        '
+        Me.btnYes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnYes.Image = Global.AppPelanggan.My.Resources.Resources.okcamera
+        Me.btnYes.Location = New System.Drawing.Point(717, 479)
+        Me.btnYes.Name = "btnYes"
+        Me.btnYes.Size = New System.Drawing.Size(32, 24)
+        Me.btnYes.TabIndex = 133
+        Me.btnYes.UseVisualStyleBackColor = True
+        '
+        'jabretKamera
+        '
+        Me.jabretKamera.Image = Global.AppPelanggan.My.Resources.Resources.camera
+        Me.jabretKamera.Location = New System.Drawing.Point(716, 459)
+        Me.jabretKamera.Name = "jabretKamera"
+        Me.jabretKamera.Size = New System.Drawing.Size(91, 68)
+        Me.jabretKamera.TabIndex = 135
+        '
+        'pickamera
+        '
+        Me.pickamera.Location = New System.Drawing.Point(526, 142)
+        Me.pickamera.Name = "pickamera"
+        Me.pickamera.Size = New System.Drawing.Size(446, 313)
+        Me.pickamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pickamera.TabIndex = 132
+        Me.pickamera.TabStop = False
         '
         'Button2
         '
@@ -269,7 +305,7 @@ Partial Class FormMenu
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 16.75!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(24, 110)
+        Me.Label3.Location = New System.Drawing.Point(439, 74)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 26)
         Me.Label3.TabIndex = 126
@@ -301,7 +337,7 @@ Partial Class FormMenu
         Me.DataGridLock.Location = New System.Drawing.Point(27, 142)
         Me.DataGridLock.Name = "DataGridLock"
         Me.DataGridLock.ReadOnly = True
-        Me.DataGridLock.Size = New System.Drawing.Size(581, 359)
+        Me.DataGridLock.Size = New System.Drawing.Size(493, 359)
         Me.DataGridLock.TabIndex = 128
         '
         'lblTutup
@@ -320,11 +356,11 @@ Partial Class FormMenu
         Me.txtJam.BackColor = System.Drawing.Color.Transparent
         Me.txtJam.Font = New System.Drawing.Font("Times New Roman", 16.75!)
         Me.txtJam.ForeColor = System.Drawing.Color.White
-        Me.txtJam.Location = New System.Drawing.Point(22, 74)
+        Me.txtJam.Location = New System.Drawing.Point(645, 106)
         Me.txtJam.Name = "txtJam"
-        Me.txtJam.Size = New System.Drawing.Size(56, 26)
+        Me.txtJam.Size = New System.Drawing.Size(68, 26)
         Me.txtJam.TabIndex = 127
-        Me.txtJam.Text = "JAM"
+        Me.txtJam.Text = "DATE"
         '
         'Label11
         '
@@ -343,7 +379,7 @@ Partial Class FormMenu
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCari.Location = New System.Drawing.Point(144, 107)
+        Me.txtCari.Location = New System.Drawing.Point(362, 107)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(277, 29)
         Me.txtCari.TabIndex = 129
@@ -355,6 +391,16 @@ Partial Class FormMenu
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(1026, 63)
         Me.Label4.TabIndex = 131
+        '
+        'btnTutup
+        '
+        Me.btnTutup.BackColor = System.Drawing.Color.Navy
+        Me.btnTutup.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTutup.Image = Global.AppPelanggan.My.Resources.Resources.close
+        Me.btnTutup.Location = New System.Drawing.Point(1313, 3)
+        Me.btnTutup.Name = "btnTutup"
+        Me.btnTutup.Size = New System.Drawing.Size(50, 39)
+        Me.btnTutup.TabIndex = 114
         '
         'FormMenu
         '
@@ -378,6 +424,7 @@ Partial Class FormMenu
         Me.Panel5.PerformLayout()
         Me.PanelAkses.ResumeLayout(False)
         Me.PanelAkses.PerformLayout()
+        CType(Me.pickamera, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridLock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -406,4 +453,8 @@ Partial Class FormMenu
     Friend WithEvents Label11 As Label
     Friend WithEvents txtCari As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents pickamera As PictureBox
+    Friend WithEvents btnNo As Button
+    Friend WithEvents btnYes As Button
+    Friend WithEvents jabretKamera As Label
 End Class
