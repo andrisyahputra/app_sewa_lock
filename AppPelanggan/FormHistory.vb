@@ -1,29 +1,25 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FormHistory
-    Private Sub comboboxIDCard()
-        Try
-            Call KoneksiKeDatabase()
-            Query = "Select * FROM tbl_lock ORDER BY id_card"
-            cmd = New MySqlCommand(Query, Conn)
-            RD = cmd.ExecuteReader
-            If RD.HasRows Then
-                Do While RD.Read
-                    CBIDCard.Items.Add(RD("id_card"))
-                Loop
-            End If
-        Catch ex As Exception
+    'Private Sub comboboxIDCard()
+    '    Try
+    '        Call KoneksiKeDatabase()
+    '        Query = "Select * FROM tbl_lock ORDER BY id_card"
+    '        cmd = New MySqlCommand(Query, Conn)
+    '        RD = cmd.ExecuteReader
+    '        If RD.HasRows Then
+    '            Do While RD.Read
+    '                CBIDCard.Items.Add(RD("id_card"))
+    '            Loop
+    '        End If
+    '    Catch ex As Exception
 
-        End Try
-    End Sub
+    '    End Try
+    'End Sub
     Private Sub tabelPerCard()
         Try
-            If CBIDCard.Text = "" Then
-                DataGridHistory.Rows.Clear()
-                DataGridHistory.Refresh()
-            Else
-                Call KoneksiKeDatabase()
+            Call KoneksiKeDatabase()
 
-                Query = "SELECT * FROM relasicard1 WHERE id_card LIKE '%" & Trim(CBIDCard.Text) & "%'"
+            Query = "SELECT * FROM relasicard1 WHERE id_card LIKE '%" & txtCari.Text & "%'"
                 daData = New MySqlDataAdapter(Query, Conn)
                 dsData = New DataSet
                 daData.Fill(dsData, "relasicard1")
@@ -76,8 +72,7 @@ Public Class FormHistory
                 DataGridHistory.DefaultCellStyle.ForeColor = Color.DarkRed
                 DataGridHistory.RowsDefaultCellStyle.BackColor = Color.SkyBlue
                 DataGridHistory.AlternatingRowsDefaultCellStyle.BackColor = Color.Wheat
-                DataGridHistory.GridColor = Color.DarkRed
-            End If
+            DataGridHistory.GridColor = Color.DarkRed
             'AturGridUnit()
 
 
@@ -97,17 +92,36 @@ Public Class FormHistory
         Call FormMenu.tampilMenu()
         FormMenu.FormMenu_Load(sender, e)
         Call FormMenu.tampilMenu()
-        CBIDCard.Items.Clear()
         Me.Close()
     End Sub
 
     Public Sub FormHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KoneksiKeDatabase()
-        comboboxIDCard()
-        CBIDCard.DropDownStyle = ComboBoxStyle.DropDownList
+        'comboboxIDCard()
+        'CBIDCard.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
-    Private Sub CBIDCard_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBIDCard.SelectedIndexChanged
+    Private Sub CBIDCard_SelectedIndexChanged(sender As Object, e As EventArgs)
         tabelPerCard()
+    End Sub
+
+    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
+
+    End Sub
+
+    Private Sub txtCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCari.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Call KoneksiKeDatabase()
+            Query = "Select * from relasicard1 where id_card='" & txtCari.Text & "'"
+            cmd = New MySqlCommand(Query, Conn)
+            RD = cmd.ExecuteReader
+            If RD.HasRows = True Then
+                tabelPerCard()
+            Else
+                txtCari.Text = ""
+                txtCari.Focus()
+                MessageBox.Show("ID CARD PELANGGAN TIDAK DITEMUKAN!!!")
+            End If
+        End If
     End Sub
 End Class

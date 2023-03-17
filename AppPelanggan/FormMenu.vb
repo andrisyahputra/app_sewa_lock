@@ -25,8 +25,6 @@ Public Class FormMenu
 
     'camera
     Public Sub setcamera()
-        btnNo.Visible = False
-        btnYes.Visible = False
         Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
 
         If CAMARAS.ShowDialog() = DialogResult.OK Then
@@ -46,98 +44,6 @@ Public Class FormMenu
         pickamera.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
 
     End Sub
-    Private Sub jabretKamera_Click(sender As Object, e As EventArgs) Handles jabretKamera.Click
-        If Cap = "Capture" Then
-            btnNo.Visible = True
-            btnYes.Visible = True
-            jabretKamera.Visible = False
-            CAMARA.Stop()
-            Cap = "Start"
-        ElseIf Cap = "Start" Then
-            Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
-            CAMARA.Start()
-            btnNo.Visible = False
-            btnYes.Visible = False
-            Cap = "Capture"
-        End If
-    End Sub
-    Private Sub btnNo_Click(sender As Object, e As EventArgs) Handles btnNo.Click
-        Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
-        CAMARA.Start()
-        btnNo.Visible = False
-        btnYes.Visible = False
-        jabretKamera.Visible = True
-        Cap = "Capture"
-    End Sub
-    Private Sub btnYes_Click(sender As Object, e As EventArgs) Handles btnYes.Click
-        Dim SD As New SaveFileDialog
-        'SD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
-        'SD.FileName = "Visual Capture " & Date.Now.ToString("MM/dd/yy")
-        SD.FileName = "Visual Capture " & Date.Now.ToString("MMddyy")
-        SD.SupportMultiDottedExtensions = True
-        SD.AddExtension = True
-        SD.Filter = "JPG File|*.jpg"
-        If SD.ShowDialog() = DialogResult.OK Then
-            Try
-                pickamera.Image.Save(SD.FileName, Imaging.ImageFormat.Jpeg)
-                Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
-                CAMARA.Start()
-                btnNo.Visible = False
-                btnYes.Visible = False
-                jabretKamera.Visible = True
-                Cap = "Capture"
-            Catch ex As Exception
-
-            End Try
-        Else
-            Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
-            CAMARA.Start()
-            btnNo.Visible = False
-            btnYes.Visible = False
-            jabretKamera.Visible = True
-            Cap = "Capture"
-        End If
-    End Sub
-
-
-    Private Sub tangkapcamera()
-        Dim SD As New SaveFileDialog
-        SD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
-        'SD.FileName = "Visual Capture " & Date.Now.ToString("MM/dd/yy")
-        SD.FileName = "Visual Capture " & Date.Now.ToString("MMddyy")
-        SD.SupportMultiDottedExtensions = True
-        SD.AddExtension = True
-        SD.Filter = "JPG File|*.jpg"
-        If SD.ShowDialog() = DialogResult.OK Then
-            Try
-                pickamera.Image.Save(SD.FileName, Imaging.ImageFormat.Jpeg)
-                Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
-                CAMARA.Start()
-                btnNo.Visible = False
-                btnYes.Visible = False
-                jabretKamera.Visible = True
-                Cap = "Capture"
-            Catch ex As Exception
-
-            End Try
-        Else
-            Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
-            CAMARA.Start()
-            btnNo.Visible = False
-            btnYes.Visible = False
-            jabretKamera.Visible = True
-            Cap = "Capture"
-        End If
-    End Sub
-
-
-
-
-
-
-
-
-
 
 
     'akhir camera
@@ -174,51 +80,58 @@ Public Class FormMenu
             Else
                 Call KoneksiKeDatabase()
 
-                Query = "SELECT * FROM relasihistori1 WHERE id_card LIKE '%" & Trim(txtCari.Text) & "%'"
+                Query = "SELECT * FROM relasihistori3 WHERE id_card LIKE '%" & Trim(txtCari.Text) & "%' ORDER BY `id` DESC"
                 daData = New MySqlDataAdapter(Query, Conn)
                 dsData = New DataSet
-                daData.Fill(dsData, "relasihistori1")
-                DataGridLock.DataSource = dsData.Tables("relasihistori1")
-
-                DataGridLock.Columns(0).Width = 110
-                DataGridLock.Columns(1).Width = 100
-                DataGridLock.Columns(2).Width = 150
+                daData.Fill(dsData, "relasihistori3")
+                DataGridLock.DataSource = dsData.Tables("relasihistori3")
+                DataGridLock.Columns(0).Width = 20
+                DataGridLock.Columns(1).Width = 110
+                DataGridLock.Columns(2).Width = 100
                 DataGridLock.Columns(3).Width = 150
-                DataGridLock.Columns(4).Width = 80
-                DataGridLock.Columns(5).Width = 90
-                DataGridLock.Columns(6).Width = 70
+                DataGridLock.Columns(4).Width = 150
+                DataGridLock.Columns(5).Width = 80
+                DataGridLock.Columns(6).Width = 90
                 DataGridLock.Columns(7).Width = 70
                 DataGridLock.Columns(8).Width = 70
                 DataGridLock.Columns(9).Width = 70
-                DataGridLock.Columns(10).Width = 90
+                DataGridLock.Columns(10).Width = 70
+                DataGridLock.Columns(11).Width = 50
+                DataGridLock.Columns(12).Width = 90
+                DataGridLock.Columns(26).Width = 150
 
-                DataGridLock.Columns(0).DataPropertyName = "nama_pelanggan"
-                DataGridLock.Columns(1).DataPropertyName = "id_kendaraan"
-                DataGridLock.Columns(2).DataPropertyName = "tgl_k_buka"
-                DataGridLock.Columns(3).DataPropertyName = "tgl_k_tutup"
-                DataGridLock.Columns(4).DataPropertyName = "nama_unit"
-                DataGridLock.Columns(5).DataPropertyName = "alamat_unit"
-                DataGridLock.Columns(6).DataPropertyName = "type_unit"
-                DataGridLock.Columns(7).DataPropertyName = "kamar"
-                DataGridLock.Columns(8).DataPropertyName = "tipe_bayar"
-                DataGridLock.Columns(9).DataPropertyName = "harga"
-                DataGridLock.Columns(10).DataPropertyName = "tgl_jatuh_tempo"
-
-                DataGridLock.Columns(0).HeaderText = "NAMA PELANGGAN"
-                DataGridLock.Columns(1).HeaderText = "ID KENDARAAN"
-                DataGridLock.Columns(2).HeaderText = "KELUAR"
-                DataGridLock.Columns(3).HeaderText = "MASUK"
-                DataGridLock.Columns(4).HeaderText = "NAMA UNIT"
-                DataGridLock.Columns(5).HeaderText = "ALAMAT UNIT"
-                DataGridLock.Columns(6).HeaderText = "TYPE UNIT"
-                DataGridLock.Columns(7).HeaderText = "KAMAR"
-                DataGridLock.Columns(8).HeaderText = "TIPE BAYAR"
-                DataGridLock.Columns(9).HeaderText = "HARGA"
-                DataGridLock.Columns(10).HeaderText = "TGL JATUH TEMPO"
+                'DataGridLock.Columns(0).DataPropertyName = "no"
+                DataGridLock.Columns(1).DataPropertyName = "nama_pelanggan"
+                DataGridLock.Columns(2).DataPropertyName = "id_kendaraan"
+                DataGridLock.Columns(3).DataPropertyName = "tgl_k_buka"
+                DataGridLock.Columns(4).DataPropertyName = "tgl_k_tutup"
+                DataGridLock.Columns(5).DataPropertyName = "nama_unit"
+                DataGridLock.Columns(6).DataPropertyName = "alamat_unit"
+                DataGridLock.Columns(7).DataPropertyName = "type_unit"
+                DataGridLock.Columns(8).DataPropertyName = "kamar"
+                DataGridLock.Columns(9).DataPropertyName = "tipe_bayar"
+                DataGridLock.Columns(10).DataPropertyName = "harga"
+                DataGridLock.Columns(11).DataPropertyName = "tempo"
+                DataGridLock.Columns(12).DataPropertyName = "tgl_jatuh_tempo"
+                DataGridLock.Columns(26).DataPropertyName = "img_history"
 
 
-                DataGridLock.Columns(11).Visible = False
-                DataGridLock.Columns(12).Visible = False
+                DataGridLock.Columns(0).HeaderText = "NO"
+                DataGridLock.Columns(1).HeaderText = "NAMA"
+                DataGridLock.Columns(2).HeaderText = "NO KENDARAAN"
+                DataGridLock.Columns(3).HeaderText = "KELUAR"
+                DataGridLock.Columns(4).HeaderText = "MASUK"
+                DataGridLock.Columns(5).HeaderText = "NAMA UNIT"
+                DataGridLock.Columns(6).HeaderText = "ALAMAT UNIT"
+                DataGridLock.Columns(7).HeaderText = "TYPE UNIT"
+                DataGridLock.Columns(8).HeaderText = "KAMAR"
+                DataGridLock.Columns(9).HeaderText = "TIPE BAYAR"
+                DataGridLock.Columns(10).HeaderText = "HARGA"
+                DataGridLock.Columns(11).HeaderText = "TEMPO"
+                DataGridLock.Columns(12).HeaderText = "TGL JATUH TEMPO"
+                DataGridLock.Columns(26).HeaderText = "GAMBAR"
+
+                'DataGridLock.Columns(12).Visible = False
                 DataGridLock.Columns(13).Visible = False
                 DataGridLock.Columns(14).Visible = False
                 DataGridLock.Columns(15).Visible = False
@@ -230,6 +143,11 @@ Public Class FormMenu
                 DataGridLock.Columns(21).Visible = False
                 DataGridLock.Columns(22).Visible = False
                 DataGridLock.Columns(23).Visible = False
+                DataGridLock.Columns(24).Visible = False
+                DataGridLock.Columns(25).Visible = False
+                'DataGridLock.Columns(25).Visible = False
+
+
                 DataGridLock.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                 DataGridLock.EnableHeadersVisualStyles = False
                 DataGridLock.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue
@@ -239,6 +157,15 @@ Public Class FormMenu
                 DataGridLock.RowsDefaultCellStyle.BackColor = Color.SkyBlue
                 DataGridLock.AlternatingRowsDefaultCellStyle.BackColor = Color.Wheat
                 DataGridLock.GridColor = Color.DarkRed
+
+                For i = 0 To DataGridLock.Rows.Count - 1
+                    Dim r As DataGridViewRow = DataGridLock.Rows(i)
+                    r.Height = 150
+                Next
+                'DataGridLock.Rows.GetRowsHeight = 150
+
+                Dim imagecolumn = DirectCast(DataGridLock.Columns(26), DataGridViewImageColumn)
+                imagecolumn.ImageLayout = DataGridViewImageCellLayout.Stretch
             End If
             'AturGridUnit()
 
@@ -248,7 +175,6 @@ Public Class FormMenu
 
         End Try
     End Sub
-
     'tutup akses
 
     Public Sub clearMenu()
@@ -263,9 +189,6 @@ Public Class FormMenu
         Button3.Visible = False
         lblTutup.Visible = False
         pickamera.Visible = False
-        btnNo.Visible = False
-        btnYes.Visible = False
-        jabretKamera.Visible = False
         CAMARA.Stop()
     End Sub
     Public Sub tampilMenu()
@@ -280,9 +203,6 @@ Public Class FormMenu
         Button3.Visible = True
         lblTutup.Visible = True
         pickamera.Visible = True
-        btnNo.Visible = True
-        btnYes.Visible = True
-        jabretKamera.Visible = True
         Dim CAMARAS As VideoCaptureDeviceForm = New VideoCaptureDeviceForm()
         CAMARA.Start()
 
@@ -414,6 +334,7 @@ Public Class FormMenu
                 cmd.Parameters.Add(p)
                 cmd.CommandText = Query
                 cmd.ExecuteNonQuery()
+
                 tabelPerCard()
             End If
         Catch ex As Exception
@@ -440,6 +361,7 @@ Public Class FormMenu
                     CAMARA.Stop()
                 Loop
                 kirimhistory()
+                Timer1.Start()
             Else
                 txtCari.Text = ""
                 txtCari.Focus()
@@ -465,5 +387,30 @@ Public Class FormMenu
 
     Private Sub FormMenu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         CAMARA.Stop()
+    End Sub
+
+
+    Private Sub DataGridLock_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles DataGridLock.RowPrePaint
+        If e.RowIndex >= 0 Then
+            Me.DataGridLock.Rows(e.RowIndex).Cells(0).Value = e.RowIndex + 1
+        End If
+    End Sub
+
+    Private Sub DataGridLock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridLock.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridLock_SelectionChanged(sender As Object, e As EventArgs)
+        DataGridLock.ClearSelection()
+    End Sub
+
+    Private Sub PanelAkses_Paint(sender As Object, e As PaintEventArgs) Handles PanelAkses.Paint
+        Timer1.Start()
+    End Sub
+
+    Private Sub DataGridLock_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles DataGridLock.DataBindingComplete
+        Dim mygrid As DataGridView
+        mygrid = CType(sender, DataGridView)
+        mygrid.ClearSelection()
     End Sub
 End Class

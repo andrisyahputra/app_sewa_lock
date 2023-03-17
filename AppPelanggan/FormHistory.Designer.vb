@@ -27,8 +27,8 @@ Partial Class FormHistory
         Me.btnTutup = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridHistory = New System.Windows.Forms.DataGridView()
-        Me.CBIDCard = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,26 +80,25 @@ Partial Class FormHistory
         Me.DataGridHistory.Size = New System.Drawing.Size(973, 76)
         Me.DataGridHistory.TabIndex = 98
         '
-        'CBIDCard
-        '
-        Me.CBIDCard.Font = New System.Drawing.Font("Times New Roman", 11.25!)
-        Me.CBIDCard.FormattingEnabled = True
-        Me.CBIDCard.Location = New System.Drawing.Point(449, 299)
-        Me.CBIDCard.Name = "CBIDCard"
-        Me.CBIDCard.Size = New System.Drawing.Size(142, 25)
-        Me.CBIDCard.TabIndex = 97
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 16.75!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(467, 270)
+        Me.Label1.Location = New System.Drawing.Point(478, 277)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(104, 26)
         Me.Label1.TabIndex = 95
         Me.Label1.Text = "ID CARD"
+        '
+        'txtCari
+        '
+        Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.Location = New System.Drawing.Point(394, 306)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(277, 29)
+        Me.txtCari.TabIndex = 130
         '
         'FormHistory
         '
@@ -107,9 +106,9 @@ Partial Class FormHistory
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.ClientSize = New System.Drawing.Size(1016, 749)
+        Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridHistory)
-        Me.Controls.Add(Me.CBIDCard)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -128,6 +127,6 @@ Partial Class FormHistory
     Friend WithEvents btnTutup As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents DataGridHistory As DataGridView
-    Friend WithEvents CBIDCard As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtCari As TextBox
 End Class

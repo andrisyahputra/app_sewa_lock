@@ -457,7 +457,8 @@ Public Class FormLock
                 Else
 
                     Call KoneksiKeDatabase()
-                    Query = "UPDATE tbl_lock SET id_pelanggan='" & CBIDP.Text & "',nama_pelanggan='" & txtNama.Text & "',id_kendaraan='" & txtKendaraan.Text & "',jam_masuk='" & jamBuka.Text & "',jam_keluar='" & jamTutup.Text & "',a_lock='-'where id_card='" & txtIDcard.Text & "'"
+                    'Query = "UPDATE tbl_lock SET id_card = '" & txtIDcard.Text & "' ,id_pelanggan='" & CBIDP.Text & "',nama_pelanggan='" & txtNama.Text & "',id_kendaraan='" & txtKendaraan.Text & "',jam_masuk='" & jamBuka.Text & "',jam_keluar='" & jamTutup.Text & "',a_lock='-'where id_card='" & txtIDcard.Text & "'"
+                    Query = "UPDATE `tbl_lock` SET `id_card`='" & txtIDcard.Text & "',`id_pelanggan`='" & CBIDP.Text & "',`nama_pelanggan`='" & txtNama.Text & "',`id_kendaraan`='" & txtKendaraan.Text & "',`jam_masuk`='" & jamBuka.Text & "',`jam_keluar`='" & jamTutup.Text & "',`a_lock`='-'"
                     daData = New MySqlDataAdapter(Query, Conn)
                     dsData = New DataSet
                     daData.Fill(dsData)

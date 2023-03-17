@@ -409,6 +409,7 @@ Public Class FormPelanggan
                                 CBBayar.Items.Clear()
                                 FormPelanggan_Load(sender, e)
                                 lvpelanggan.Enabled = True
+                                lvpelanggan.Scrollable = True
                                 btnLapor.Enabled = True
                                 Call KosongkanData()
                                 FormLock.ShowDialog()
@@ -516,6 +517,8 @@ Public Class FormPelanggan
                 FieldAktif()
                 BtnEdit.Location = New Point(731, 429)
                 BtnTambah.Location = New Point(824, 429)
+                txtTempo.Enabled = True
+                DateBayar.Enabled = True
                 'BtnTambah.Location = New Point(1179, 412)
                 'BtnEdit.Location = New Point(1086, 412)
                 'txtId.Enabled = False
@@ -544,8 +547,6 @@ Public Class FormPelanggan
                     MsgBox("Tanggal kendraan kesalahan!!!")
                 ElseIf Not DateBayar.Text >= Today Then
                     MsgBox("Tanggal bayar kesalahan!!!")
-                ElseIf Not DateJTempo.Text >= DateBayar.Text Then
-                    MsgBox("Tanggal jtempo kelewatan")
                 Else
 
                     Call KoneksiKeDatabase()
@@ -679,6 +680,23 @@ Public Class FormPelanggan
                 BtnEdit.Enabled = True
                 btnHapus.Enabled = True
                 BtnTambah.Enabled = False
+
+                txtId.Enabled = False
+                CBIDUnit.Enabled = False
+                CBIDKamar.Enabled = False
+                txtKamar.Enabled = False
+                txtUnit.Enabled = False
+                txtNama.Enabled = False
+                CBIDKamar.Enabled = False
+                txtKendaraa.Enabled = False
+                DateKendaraan.Enabled = False
+                CBBayar.Enabled = False
+                'txtHargaSw.Enabled = False
+                DateBayar.Enabled = False
+                DateJTempo.Enabled = False
+                txtTanggal.Enabled = False
+                txtKasir.Enabled = False
+                txtJam.Enabled = False
                 btnLapor.Enabled = False
 
                 idNilai = .Item(0).SubItems(0).Text

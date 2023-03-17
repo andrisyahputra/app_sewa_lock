@@ -23,6 +23,10 @@ Partial Class FormMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMenu))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -38,20 +42,17 @@ Partial Class FormMenu
         Me.btnUnit = New System.Windows.Forms.Button()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.PanelAkses = New System.Windows.Forms.Panel()
-        Me.btnNo = New System.Windows.Forms.Button()
-        Me.btnYes = New System.Windows.Forms.Button()
-        Me.jabretKamera = New System.Windows.Forms.Label()
         Me.pickamera = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.DataGridLock = New System.Windows.Forms.DataGridView()
         Me.lblTutup = New System.Windows.Forms.Label()
         Me.txtJam = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
+        Me.DataGridLock = New System.Windows.Forms.DataGridView()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -225,9 +226,6 @@ Partial Class FormMenu
         'PanelAkses
         '
         Me.PanelAkses.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.PanelAkses.Controls.Add(Me.btnNo)
-        Me.PanelAkses.Controls.Add(Me.btnYes)
-        Me.PanelAkses.Controls.Add(Me.jabretKamera)
         Me.PanelAkses.Controls.Add(Me.pickamera)
         Me.PanelAkses.Controls.Add(Me.Button2)
         Me.PanelAkses.Controls.Add(Me.Label3)
@@ -245,39 +243,11 @@ Partial Class FormMenu
         Me.PanelAkses.Size = New System.Drawing.Size(1004, 749)
         Me.PanelAkses.TabIndex = 123
         '
-        'btnNo
-        '
-        Me.btnNo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNo.Image = Global.AppPelanggan.My.Resources.Resources.closecamera
-        Me.btnNo.Location = New System.Drawing.Point(774, 478)
-        Me.btnNo.Name = "btnNo"
-        Me.btnNo.Size = New System.Drawing.Size(32, 24)
-        Me.btnNo.TabIndex = 134
-        Me.btnNo.UseVisualStyleBackColor = True
-        '
-        'btnYes
-        '
-        Me.btnYes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnYes.Image = Global.AppPelanggan.My.Resources.Resources.okcamera
-        Me.btnYes.Location = New System.Drawing.Point(717, 479)
-        Me.btnYes.Name = "btnYes"
-        Me.btnYes.Size = New System.Drawing.Size(32, 24)
-        Me.btnYes.TabIndex = 133
-        Me.btnYes.UseVisualStyleBackColor = True
-        '
-        'jabretKamera
-        '
-        Me.jabretKamera.Image = Global.AppPelanggan.My.Resources.Resources.camera
-        Me.jabretKamera.Location = New System.Drawing.Point(716, 459)
-        Me.jabretKamera.Name = "jabretKamera"
-        Me.jabretKamera.Size = New System.Drawing.Size(91, 68)
-        Me.jabretKamera.TabIndex = 135
-        '
         'pickamera
         '
-        Me.pickamera.Location = New System.Drawing.Point(526, 142)
+        Me.pickamera.Location = New System.Drawing.Point(526, 204)
         Me.pickamera.Name = "pickamera"
-        Me.pickamera.Size = New System.Drawing.Size(446, 313)
+        Me.pickamera.Size = New System.Drawing.Size(446, 402)
         Me.pickamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pickamera.TabIndex = 132
         Me.pickamera.TabStop = False
@@ -291,7 +261,7 @@ Partial Class FormMenu
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = Global.AppPelanggan.My.Resources.Resources.setlock
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(64, 540)
+        Me.Button2.Location = New System.Drawing.Point(64, 626)
         Me.Button2.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(336, 63)
@@ -305,7 +275,7 @@ Partial Class FormMenu
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 16.75!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(439, 74)
+        Me.Label3.Location = New System.Drawing.Point(455, 91)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 26)
         Me.Label3.TabIndex = 126
@@ -320,25 +290,13 @@ Partial Class FormMenu
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = Global.AppPelanggan.My.Resources.Resources.setlock
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(602, 540)
+        Me.Button3.Location = New System.Drawing.Point(602, 626)
         Me.Button3.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(336, 63)
         Me.Button3.TabIndex = 130
         Me.Button3.Text = "TUTUP"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'DataGridLock
-        '
-        Me.DataGridLock.AllowUserToAddRows = False
-        Me.DataGridLock.AllowUserToDeleteRows = False
-        Me.DataGridLock.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridLock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridLock.Location = New System.Drawing.Point(27, 142)
-        Me.DataGridLock.Name = "DataGridLock"
-        Me.DataGridLock.ReadOnly = True
-        Me.DataGridLock.Size = New System.Drawing.Size(493, 359)
-        Me.DataGridLock.TabIndex = 128
         '
         'lblTutup
         '
@@ -356,7 +314,7 @@ Partial Class FormMenu
         Me.txtJam.BackColor = System.Drawing.Color.Transparent
         Me.txtJam.Font = New System.Drawing.Font("Times New Roman", 16.75!)
         Me.txtJam.ForeColor = System.Drawing.Color.White
-        Me.txtJam.Location = New System.Drawing.Point(645, 106)
+        Me.txtJam.Location = New System.Drawing.Point(357, 154)
         Me.txtJam.Name = "txtJam"
         Me.txtJam.Size = New System.Drawing.Size(68, 26)
         Me.txtJam.TabIndex = 127
@@ -379,7 +337,7 @@ Partial Class FormMenu
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCari.Location = New System.Drawing.Point(362, 107)
+        Me.txtCari.Location = New System.Drawing.Point(362, 122)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(277, 29)
         Me.txtCari.TabIndex = 129
@@ -401,6 +359,40 @@ Partial Class FormMenu
         Me.btnTutup.Name = "btnTutup"
         Me.btnTutup.Size = New System.Drawing.Size(50, 39)
         Me.btnTutup.TabIndex = 114
+        '
+        'DataGridLock
+        '
+        Me.DataGridLock.AllowUserToAddRows = False
+        Me.DataGridLock.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridLock.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridLock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridLock.Location = New System.Drawing.Point(27, 204)
+        Me.DataGridLock.Name = "DataGridLock"
+        Me.DataGridLock.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridLock.RowHeadersVisible = False
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridLock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridLock.Size = New System.Drawing.Size(493, 402)
+        Me.DataGridLock.TabIndex = 128
         '
         'FormMenu
         '
@@ -447,14 +439,11 @@ Partial Class FormMenu
     Friend WithEvents Button2 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents DataGridLock As DataGridView
     Friend WithEvents lblTutup As Label
     Friend WithEvents txtJam As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents txtCari As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents pickamera As PictureBox
-    Friend WithEvents btnNo As Button
-    Friend WithEvents btnYes As Button
-    Friend WithEvents jabretKamera As Label
+    Friend WithEvents DataGridLock As DataGridView
 End Class
