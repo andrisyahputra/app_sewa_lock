@@ -29,6 +29,7 @@ Public Class FormUnit
         DataGridUnit.Columns(5).Visible = False
         DataGridUnit.Columns(6).Visible = False
         DataGridUnit.Columns(7).Visible = False
+
         DataGridUnit.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridUnit.EnableHeadersVisualStyles = False
         DataGridUnit.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue

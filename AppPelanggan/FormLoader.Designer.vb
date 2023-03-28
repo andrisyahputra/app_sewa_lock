@@ -46,7 +46,7 @@ Partial Class FormLoader
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AppPelanggan.My.Resources.Resources.loading
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(430, 189)
+        Me.ClientSize = New System.Drawing.Size(423, 188)
         Me.Controls.Add(Me.ProgressBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

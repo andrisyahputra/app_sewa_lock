@@ -208,10 +208,6 @@ Public Class FormMenu
 
     End Sub
 
-
-    Private Sub btnUser_Click(sender As Object, e As EventArgs)
-        FormTambahUser.ShowDialog()
-    End Sub
     Sub switchPanel(ByVal panel As Form)
         PanelMenu.Controls.Clear()
         'btnTutup.Visible = False
