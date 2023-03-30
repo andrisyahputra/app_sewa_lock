@@ -218,9 +218,9 @@ Partial Class FormMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelMenu.Location = New System.Drawing.Point(258, 0)
+        Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(746, 749)
+        Me.PanelMenu.Size = New System.Drawing.Size(1004, 749)
         Me.PanelMenu.TabIndex = 47
         '
         'PanelAkses
