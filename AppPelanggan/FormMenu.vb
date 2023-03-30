@@ -372,6 +372,8 @@ Public Class FormMenu
 
     Public Sub FormMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtCari.Text = ""
+        txtCari.Focus()
+
         Try
             DataGridLock.DataSource.clear()
         Catch ex As Exception
@@ -379,6 +381,11 @@ Public Class FormMenu
         End Try
         KoneksiKeDatabase()
         Timer1.Start()
+
+        For i = 0 To DataGridLock.Rows.Count - 1
+            Dim r As DataGridViewRow = DataGridLock.Rows(i)
+            r.Height = 150
+        Next
     End Sub
 
     Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
@@ -397,7 +404,10 @@ Public Class FormMenu
     End Sub
 
     Private Sub DataGridLock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridLock.CellContentClick
-
+        For i = 0 To DataGridLock.Rows.Count - 1
+            Dim r As DataGridViewRow = DataGridLock.Rows(i)
+            r.Height = 150
+        Next
     End Sub
 
     Private Sub DataGridLock_SelectionChanged(sender As Object, e As EventArgs)
@@ -412,5 +422,12 @@ Public Class FormMenu
         Dim mygrid As DataGridView
         mygrid = CType(sender, DataGridView)
         mygrid.ClearSelection()
+    End Sub
+
+    Private Sub DataGridLock_MouseClick(sender As Object, e As MouseEventArgs) Handles DataGridLock.MouseClick
+        For i = 0 To DataGridLock.Rows.Count - 1
+            Dim r As DataGridViewRow = DataGridLock.Rows(i)
+            r.Height = 150
+        Next
     End Sub
 End Class

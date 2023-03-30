@@ -46,13 +46,13 @@ Partial Class FormMenu
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridLock = New System.Windows.Forms.DataGridView()
         Me.lblTutup = New System.Windows.Forms.Label()
         Me.txtJam = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnTutup = New System.Windows.Forms.Label()
-        Me.DataGridLock = New System.Windows.Forms.DataGridView()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -218,9 +218,9 @@ Partial Class FormMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
+        Me.PanelMenu.Location = New System.Drawing.Point(258, 0)
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(1004, 749)
+        Me.PanelMenu.Size = New System.Drawing.Size(746, 749)
         Me.PanelMenu.TabIndex = 47
         '
         'PanelAkses
@@ -298,6 +298,40 @@ Partial Class FormMenu
         Me.Button3.Text = "TUTUP"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'DataGridLock
+        '
+        Me.DataGridLock.AllowUserToAddRows = False
+        Me.DataGridLock.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridLock.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridLock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridLock.Location = New System.Drawing.Point(27, 204)
+        Me.DataGridLock.Name = "DataGridLock"
+        Me.DataGridLock.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridLock.RowHeadersVisible = False
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridLock.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridLock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridLock.Size = New System.Drawing.Size(493, 402)
+        Me.DataGridLock.TabIndex = 128
+        '
         'lblTutup
         '
         Me.lblTutup.BackColor = System.Drawing.Color.Navy
@@ -359,40 +393,6 @@ Partial Class FormMenu
         Me.btnTutup.Name = "btnTutup"
         Me.btnTutup.Size = New System.Drawing.Size(50, 39)
         Me.btnTutup.TabIndex = 114
-        '
-        'DataGridLock
-        '
-        Me.DataGridLock.AllowUserToAddRows = False
-        Me.DataGridLock.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridLock.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridLock.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridLock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridLock.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridLock.Location = New System.Drawing.Point(27, 204)
-        Me.DataGridLock.Name = "DataGridLock"
-        Me.DataGridLock.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridLock.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridLock.RowHeadersVisible = False
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridLock.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridLock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridLock.Size = New System.Drawing.Size(493, 402)
-        Me.DataGridLock.TabIndex = 128
         '
         'FormMenu
         '
